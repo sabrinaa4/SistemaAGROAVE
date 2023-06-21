@@ -1,0 +1,56 @@
+﻿<Window x:Class="SistemaAGROAVE.Views.CadastrarFuncionario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaAGROAVE.Views"
+        mc:Ignorable="d"
+        Title="CadastrarFuncionario" Height="479" Width="855">
+    <Grid x:Name="txtEstado">
+        <Label Content="NOME:" HorizontalAlignment="Left" Margin="58,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="117"/>
+        <Label Content="RG:" HorizontalAlignment="Left" Margin="58,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="117"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="58,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22"/>
+        <TextBox x:Name="txtSalario" HorizontalAlignment="Left" Margin="58,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+        <TextBox x:Name="txtRg" HorizontalAlignment="Left" Margin="58,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+        <Label Content="CARTEIRA DE TRABALHO:" HorizontalAlignment="Left" Margin="53,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="177"/>
+        <TextBox x:Name="txtCarteira" HorizontalAlignment="Left" Margin="58,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+        <Label Content="CPF:" HorizontalAlignment="Left" Margin="437,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="37"/>
+        <Label Content="TELEFONE:" HorizontalAlignment="Left" Margin="437,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="76"/>
+        <TextBox x:Name="txtFuncao" HorizontalAlignment="Left" Margin="437,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Height="24" Background="White"/>
+        <Button x:Name="___Sem_Nome_" Content="CONSULTAR FUNCIONÁRIO" HorizontalAlignment="Left" Margin="417,246,0,0" VerticalAlignment="Top" Width="354" Height="32" Background="#FFB4E1F9" FontFamily="Arial" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="50,285,0,0" Stroke="Black" VerticalAlignment="Top" Width="768" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Label Content="ENDEREÇO" HorizontalAlignment="Left" Margin="66,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="27" FontFamily="Arial" FontWeight="Bold" Width="82"/>
+        <Label Content="ESTADO:" HorizontalAlignment="Left" Margin="68,305,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="62"/>
+        <Label Content="CIDADE:" HorizontalAlignment="Left" Margin="330,305,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="58"/>
+        <Label Content="BAIRRO:" HorizontalAlignment="Left" Margin="572,305,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="60"/>
+        <TextBox HorizontalAlignment="Left" Margin="572,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="22"/>
+        <TextBox x:Name="txtBairro" HorizontalAlignment="Left" Margin="572,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="22" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Margin="66,381,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="22"/>
+        <Label Content="RUA:" HorizontalAlignment="Left" Margin="66,357,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="38"/>
+        <TextBox x:Name="txtRua" HorizontalAlignment="Left" Margin="66,381,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="22"/>
+        <Label Content="Nº:" HorizontalAlignment="Left" Margin="330,358,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="26"/>
+        <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="330,381,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98" Height="22"/>
+        <Button Content="Voltar" HorizontalAlignment="Left" Margin="119,420,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF77BBE0" FontFamily="Arial" FontWeight="Bold"/>
+        <Button Content="Salvar" Click ="BtnSalvar_Click"  HorizontalAlignment="Left" Margin="390,416,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF77BBE0" FontFamily="Arial" FontWeight="Bold"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="665,420,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF77BBE0" FontFamily="Arial" FontWeight="Bold"/>
+        <Label Content="Cadastrar Funcionário" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="16" Height="37"/>
+        <Label Content="SALÁRIO:" HorizontalAlignment="Left" Margin="58,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="90"/>
+        <TextBox x:Name="txtSetor" HorizontalAlignment="Left" Margin="437,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Height="24" Background="White" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Margin="434,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Height="24" Background="White"/>
+        <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="434,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Height="24" Background="White"/>
+        <Label Content="SETOR:" HorizontalAlignment="Left" Margin="437,146,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="76"/>
+        <Label Content="FUNÇÃO:" HorizontalAlignment="Left" Margin="437,188,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="76"/>
+        <TextBox x:Name="txtMunicipio" HorizontalAlignment="Left" Margin="330,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="22" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="txtEstado1" HorizontalAlignment="Left" Margin="66,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Height="22" TextChanged="TextBox_TextChanged"/>
+
+    </Grid>
+</Window>
