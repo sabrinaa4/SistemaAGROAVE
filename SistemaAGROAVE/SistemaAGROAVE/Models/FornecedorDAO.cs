@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaAGROAVE.Interface;
 using SistemaAGROAVE.DataBase;
+using MySql.Data.MySqlClient;
 
 namespace SistemaAGROAVE.Models
 {
@@ -69,7 +70,43 @@ namespace SistemaAGROAVE.Models
 
         public List<Fornecedor> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Fornecedor> list = new List<Fornecedor>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM Fornecedor;";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Fornecedor()
+                    {
+                        Id = reader.GetInt32("id_for"),
+                        NomeFantasia = reader.GetString("nome_fantasia_for"),
+                        RazaoSocial = reader.GetString("razao_social_for"),
+                        Cnpj = reader.GetString("cnpj_for"),
+                        Telefone = reader.GetString("telefone_for"),
+                        Email = reader.GetString("email_for"),
+                        Numero = reader.GetString("numero_for"),
+                        Rua = reader.GetString("rua_for"),
+                        Bairro = reader.GetString("bairro_for"),
+                        Municipio = reader.GetString("municipio_for"),
+                        Estado = reader.GetString("estado_for")
+                    }); ;
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Fornecedor t)

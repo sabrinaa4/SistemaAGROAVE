@@ -70,5 +70,34 @@ namespace SistemaAGROAVE.Views
 
             }
         }
+
+        private void btnConsultarCli_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarCliente form = new ConsultarCliente();
+            form.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Deseja realmente Cancelar?", "App - Cadastrar Cliente", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            txtNome.Text = "";
+            txtEmail.Text = "";
+            txtCpf.Text = "";
+            txtTelefone.Text = "";
+            txtNumero.Text = "";
+            txtRua.Text = "";
+            txtBairro.Text = "";
+            txtMunicipio.Text = "";
+            txtEstado.Text = "";
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Deseja realmente Voltar?", "App - Cadastrar Cliente", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+                this.Close();
+        }
     }
 }

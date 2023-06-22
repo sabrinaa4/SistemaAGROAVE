@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CadastrarCliente" Height="479" Width="855">
     <Grid>
-        <Image Margin="405,-406,400,11" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+        <Image Margin="394,-417,411,0" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -48,10 +48,10 @@
         <TextBox x:Name="txtRua" HorizontalAlignment="Left" Margin="57,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="22"/>
         <Label Content="Nº:" HorizontalAlignment="Left" Margin="322,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="26"/>
         <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="322,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="97" Height="22"/>
-        <Button Content="Voltar" HorizontalAlignment="Left" Margin="120,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
+        <Button Content="Voltar" HorizontalAlignment="Left" Margin="120,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_1"/>
         <Button Content="Salvar" Click="BtnSalvar_Click" HorizontalAlignment="Left" Margin="694,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
-        <Button x:Name="btnConsultarCli" Content="Consultar Cliente" HorizontalAlignment="Left" Margin="503,184,0,0" VerticalAlignment="Top" Width="180" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="526,391,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
+        <Button x:Name="btnConsultarCli" Content="Consultar Cliente" HorizontalAlignment="Left" Margin="503,184,0,0" VerticalAlignment="Top" Width="180" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="btnConsultarCli_Click"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="526,391,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click"/>
         <Label Content="CADASTRAR CLIENTE - PESSOA FÍSICA " HorizontalAlignment="Left" Margin="235,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="18" Height="37" Foreground="White"/>
         <TextBox x:Name="txtEstado" HorizontalAlignment="Left" Margin="59,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="22"/>
         <TextBox x:Name="txtMunicipio" HorizontalAlignment="Left" Margin="309,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="22"/>

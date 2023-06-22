@@ -21,8 +21,8 @@ Select * From Cliente;
 insert into Cliente values (null, 'Erasmus Kidd', 'erasmuskidd4401@hotmail.com', '111.222.333-44', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
 insert into Cliente values (null, 'João Silva', 'joao.silva@email.com', '886.983.010-10', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
 insert into Cliente values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
-insert into Cliente values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20', '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
-insert into Cliente values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04', '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
+insert into Cliente values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
+insert into Cliente values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
 
 create table Perfil_Usuario(
 id_perf int primary key auto_increment,
@@ -65,7 +65,7 @@ observacoes_ave varchar(100),
 cor_identificacao_ave varchar(50),
 quant_obito_ave int,
 raca_ave varchar(50),
-data_entrada_ave date,
+data_entrada_ave varchar(100),
 lote_ave varchar(100),
 numero_galpao_ave int
 );
@@ -80,19 +80,18 @@ create table Produto (
 id_prod int primary key auto_increment,
 nome_prod  varchar(100),
 descricao_prod varchar(150),
-data_fabricacao_prod date,
-data_vencimento_prod date,
+data_fabricacao_prod varchar(50),
+data_vencimento_prod varchar(50),
 codigo_barras_prod varchar(45),
-quant_prod int,
 origem_prod varchar(100),
 valor_prod double
 );
 
-#Select * From Produto;
+Select * From Produto;
 
-insert into Produto values (null, 'Cartela de ovos', 'Cartela com 12 unidades', '2023-06-19', '2023-06-26', '123456789', 1, 'Granja Primavera', 14.99);
-insert into Produto values (null, 'Ovo Branco', null, '2023-06-19', '2023-07-19', '1234567890123', 500, 'Granja Primavera', 1.25);
-insert into Produto values (null, 'Ovo Vermelho', null, '2023-06-19', '2023-06-25', '5678901234567', 200, 'Granja Primavera', 2.00);
+insert into Produto values (null, 'Cartela de ovos', 'Cartela com 12 unidades', '2023-06-19', '2023-06-26', '123456789', 'Granja Primavera', 14.99);
+insert into Produto values (null, 'Ovo Branco', 'jhdsh', '2023-06-19', '2023-07-19', '1234567890123', 'Granja Primavera', 1.25);
+insert into Produto values (null, 'Ovo Vermelho', 'sdwsd', '2023-06-19', '2023-06-25', '5678901234567','Granja Primavera', 2.00);
 
 create table Fornecedor(
 id_for int primary key auto_increment,
@@ -110,9 +109,9 @@ estado_for varchar(30)
 
 Select * From Fornecedor;
 
-insert into Fornecedor values (null, 'Rações CIA', null, '73.680.269/0001-30', '(83) 2592-5389', 'racoes@gmail.com', 987, 'José Pereira da Cunha', 'Platô do Piquiá', 'Boca do Acre', 'Amazonas');
-insert into Fornecedor values (null, 'Sarah & Alessandra', 'Sarah e Alessandra Alimentos Ltda', '65.895.424/0001-07', '(16) 3775-5740', 'sarahealessandra@gmail.com', 21, 'Avenida Vinte', 'Portal Terra da Saudade', 'Matão', 'São Paulo');
-insert into Fornecedor values (null, 'CB Gráfica', 'Carlos e Benício Gráfica ME', '25.770.959/0001-37', '(11) 2503-7154', 'carlosebeniciograficamegmail.com', 2425, 'Guarda Municipal Paulo Benedito de Camargo', 'Conjunto Habitacional São José', 'Campo Limpo Paulista', 'São Paulo');
+insert into Fornecedor values (null, 'Rações CIA', '5555', '73.680.269/0001-30',  '(83) 2592-5389', 'racoes@gmail.com', 987, 'José Pereira da Cunha', 'Platô do Piquiá', 'Boca do Acre', 'Amazonas');
+insert into Fornecedor values (null, 'Sarah & Alessandra', 'Sarah e Alessandra Alimentos Ltda',  '539.787.725-67', '(16) 3775-5740', 'sarahealessandra@gmail.com', 21, 'Avenida Vinte', 'Portal Terra da Saudade', 'Matão', 'São Paulo');
+insert into Fornecedor values (null, 'CB Gráfica', 'Carlos e Benício Gráfica ME', '628.821.430-58', '(11) 2503-7154', 'carlosebeniciograficamegmail.com', 2425, 'Guarda Municipal Paulo Benedito de Camargo', 'Conjunto Habitacional São José', 'Campo Limpo Paulista', 'São Paulo');
 
 create table Estoque(
 id_est int primary key auto_increment,
@@ -179,21 +178,21 @@ telefone_fun varchar(50),
 carteira_trabalho_fun varchar(50),
 funcao_fun varchar(50),
 setor_fun varchar(50),
-numero_fun int,
+numero_fun varchar(50),
 rua_fun varchar(50),
 bairro_fun varchar(50),
 municipio_fun varchar(50),
 estado_fun varchar(50),
-salaio_fun double,
+salario_fun double,
 id_perf_fk int,
 foreign key(id_perf_fk) references Perfil_Usuario (id_perf)
 );
 
 Select * From Funcionario;
 
-insert into Funcionario values (null, 'João Silva', '12.345.678-9','016.569.598-00', '(98) 97654-8321', 'CT123456', 'Vendedor','Vendas', 1435, 'Lindicelma Alves de Jesus', 'Bosque dos Ipês', 'Ji-Paraná', 'Rondônia',1500, 1);
-insert into Funcionario values (null, 'Pedro Alvez', '32.165.498-7', '850.509.198-00','(54) 93210-2987', 'CT567890', 'Caixista', 'Caixa', 1890,  'Chico Mendes', 'Parque São Pedro', 'Ji-Paraná', 'Rondônia',1600, 1);
-insert into Funcionario values (null, 'Ana Souza', '54.321.987-6','120.969.538-00', '(98) 97654-9321', 'CT987654', 'Entregador', 'Entregas', 205, 'Angelim', 'Nova Brasília', 'Ji-Paraná', 'Rondônia',1500, 1);
+insert into Funcionario values (null, 'João Silva', '12.345.678-9','12.345.678-9', '(98) 97654-8321', 'CT123456', 'Vendedor','Vendas',' 1435', 'Lindicelma Alves de Jesus', 'Bosque dos Ipês', 'Ji-Paraná', 'Rondônia',1235, 1);
+insert into Funcionario values (null, 'Pedro Alvez', '32.165.498-7','12.345.678-9', '(54) 93210-2987', 'CT567890', 'Caixista', 'Caixa','1890',  'Chico Mendes', 'Parque São Pedro', 'Ji-Paraná', 'Rondônia',1235, 1);
+insert into Funcionario values (null, 'Ana Souza', '54.321.987-6','12.345.678-9', '(98) 97654-9321', 'CT987654', 'Entregador', 'Entregas', '205', 'Angelim', 'Nova Brasília', 'Ji-Paraná', 'Rondônia', 1235,1);
 
 create table Entrega(
 id_ent int primary key auto_increment,

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SistemaAGROAVE.Interface;
 using SistemaAGROAVE.Views;
 
 namespace SistemaAGROAVE
@@ -25,14 +26,44 @@ namespace SistemaAGROAVE
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnCadastrarFun_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarFuncionario form = new CadastrarFuncionario();
+            form.ShowDialog();  
+        }
+
+        private void btnCadastrarProd_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarProduto form = new CadastrarProduto();
+            form.ShowDialog();
+        }
+
+        private void btnCadastrarFor_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarFornecedor form = new CadastrarFornecedor();
+            form.ShowDialog();
+        }
+
+        private void btnDespesa_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnCadastrarCliente_Click(object sender, RoutedEventArgs e)
         {
-            Aves form = new Aves();
+            CadastrarCliente form = new CadastrarCliente();
+            form.ShowDialog();
+        }
+
+        private void btnCadastrarPro_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarProduto form = new CadastrarProduto();
+            form.ShowDialog();
+        }
+
+        private void btnCadastrarAve_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrarAves form = new RegistrarAves();
             form.ShowDialog();
         }
     }

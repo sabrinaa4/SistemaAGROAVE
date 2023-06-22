@@ -42,8 +42,8 @@ namespace SistemaAGROAVE.Views
             {
                 Funcionario funcionario = new Funcionario();
                 funcionario.Nome = txtNome.Text;
-                funcionario.Rg = txtCpf.Text;
-                funcionario.Cpf = txtRg.Text;
+                funcionario.Rg = txtRg.Text;
+                funcionario.Cpf = txtCpf.Text;
                 funcionario.Telefone = txtTelefone.Text;
                 funcionario.CarteiraTrabalho = txtCarteira.Text;
                 funcionario.Funcao = txtFuncao.Text;
@@ -92,6 +92,20 @@ namespace SistemaAGROAVE.Views
 
 
 
+        }
+
+        private void btnConsultarFun_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarFuncionario form = new ConsultarFuncionario();
+            form.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Deseja realmente Voltar?", "App - Registro de Aves", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+                this.Close();
         }
     }
 }

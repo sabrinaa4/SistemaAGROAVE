@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaAGROAVE.DataBase;
 using SistemaAGROAVE.Interface;
+using SistemaAGROAVE.Models;
+using MySql.Data.MySqlClient;
 
 namespace SistemaAGROAVE.Models
 {
@@ -29,7 +31,41 @@ namespace SistemaAGROAVE.Models
 
         public List<Aves> List()
         {
-            throw new NotImplementedException();
+           
+            try
+            {
+                List<Aves> list = new List<Aves>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM Aves;";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Aves()
+                    {
+                        Id = reader.GetInt32("id_ave"),
+                        Observacoes = reader.GetString( "observacoes_ave"),
+                        CorIdentificacao =reader.GetString( "cor_identificacao_ave"),
+                        QuantObito = reader.GetInt32("quant_obito_ave"),
+                        Raca = reader.GetString("raca_ave"),
+                        DataEntrada = reader.GetString("data_entrada_ave"),
+                        Lote = reader.GetString("lote_ave"),
+                        NumeroGalpao =  reader.GetInt32("numero_galpao_ave")
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Aves t)
@@ -43,7 +79,7 @@ namespace SistemaAGROAVE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO Cliente (observacoes_ave, cor_identificacao_ave, quant_obito_ave, raca_ave, data_entrada_ave, lote_ave, numero_galpao_ave)" +
+                query.CommandText = "INSERT INTO Aves (observacoes_ave, cor_identificacao_ave, quant_obito_ave, raca_ave, data_entrada_ave, lote_ave, numero_galpao_ave)" +
                     "VALUES (@observacoes,@cor_identificacao,@quant_obito,@raca, @data_entrada, @lote, @numero_galpao)";
                 query.Parameters.AddWithValue("@observacoes", t.Observacoes);
                 query.Parameters.AddWithValue("@cor_identificacao", t.CorIdentificacao);
@@ -71,7 +107,7 @@ namespace SistemaAGROAVE.Models
 
         }
 
-        internal static void Insert(Views.Aves aves)
+        internal static void Insert(Views.RegistrarAves aves)
         {
             throw new NotImplementedException();
         }

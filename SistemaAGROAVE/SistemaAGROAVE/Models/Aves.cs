@@ -13,9 +13,8 @@ namespace SistemaAGROAVE.Models
         public string CorIdentificacao { get; set; }
         public int QuantObito { get; set; }
         public string Raca { get; set; }
-        public DateTime DataEntrada { get; set; }
+        public string DataEntrada { get; set; }
         public string Lote { get; set; }
         public int NumeroGalpao { get; set; }
-
     }
 }

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaAGROAVE.Interface;
 using SistemaAGROAVE.DataBase;
+using MySql.Data.MySqlClient;
+
 
 namespace SistemaAGROAVE.Models
 {
@@ -70,7 +72,46 @@ namespace SistemaAGROAVE.Models
 
         public List<Funcionario> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Funcionario> list = new List<Funcionario>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM Funcionario;";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Funcionario()
+                    {
+                        Id = reader.GetInt32("id_fun"),
+                        Nome = reader.GetString("nome_fun"),
+                        Rg = reader.GetString("rg_fun"),
+                        Cpf = reader.GetString("cpf_fun"),
+                        Telefone = reader.GetString("telefone_fun"),
+                        CarteiraTrabalho = reader.GetString("carteira_trabalho_fun"),
+                        Funcao = reader.GetString("funcao_fun"),
+                        Setor = reader.GetString("setor_fun"),
+                        Numero = reader.GetString("numero_fun"),
+                        Rua = reader.GetString("rua_fun"),
+                        Bairro = reader.GetString("bairro_fun"),
+                        Municipio = reader.GetString("municipio_fun"),
+                        Estado = reader.GetString("estado_fun"),
+                        Salario = reader.GetDouble("salario_fun")
+                    }); 
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Funcionario t)

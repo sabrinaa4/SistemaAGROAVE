@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaAGROAVE.DataBase;
 using SistemaAGROAVE.Interface;
+using MySql.Data.MySqlClient;
 
 namespace SistemaAGROAVE.Models
 {
@@ -68,7 +69,42 @@ namespace SistemaAGROAVE.Models
 
         public List<Cliente> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Cliente> list = new List<Cliente>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM Cliente;";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Cliente()
+                    {
+                        Id = reader.GetInt32("id_cli"),
+                        Nome = reader.GetString("nome_cli"),
+                        Email = reader.GetString("email_cli"),
+                        Cpf = reader.GetString("cpf_cli"),
+                        Telefone = reader.GetString("telefone_cli"),
+                        Numero = reader.GetInt32("numero_casa_cli"),
+                        Rua = reader.GetString("rua_cli"),
+                        Bairro = reader.GetString("bairro_cli"),
+                        Municipio = reader.GetString("municipio_cli"),
+                        Estado = reader.GetString("estado_cli")
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Cliente t)
