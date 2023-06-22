@@ -6,25 +6,38 @@
         xmlns:local="clr-namespace:SistemaAGROAVE.Views"
         mc:Ignorable="d"
         Title="ControlarAcessoAoPerfil" Height="450" Width="800">
-    <Grid>
-        <Label Content="Controlar Acesso Perfil do Funcionário" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="16" Height="37"/>
-        <Label Content="NOME:" HorizontalAlignment="Left" Margin="262,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="48"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="262,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="433" Height="26"/>
-        <Label Content="CPF:" HorizontalAlignment="Left" Margin="268,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="36"/>
-        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Margin="262,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="326" Height="22"  />
-        <Image Margin="28,47,608,230" Source="/icon perfil2.png" Stretch="Fill"/>
-        <Label Content="RG:" HorizontalAlignment="Left" Margin="28,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="37"/>
-        <TextBox x:Name="txtRg"  HorizontalAlignment="Left" Margin="28,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Height="27"/>
-        <Label Content="CONTATO:" HorizontalAlignment="Left" Margin="28,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="87"/>
-        <TextBox x:Name="txtContato" HorizontalAlignment="Left" Margin="28,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="327" Height="22"/>
-        <Label Content="E-MAIL:" HorizontalAlignment="Left" Margin="24,328,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="88"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="28,357,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="382" Height="27" />
-        <Label Content="FUNÇÃO:" HorizontalAlignment="Left" Margin="483,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="80"/>
-        <TextBox x:Name="txtFuncao" HorizontalAlignment="Left" Margin="483,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="327" Height="22"/>
-        <Label Content="SETOR:" HorizontalAlignment="Left" Margin="483,226,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="80"/>
-        <TextBox x:Name="txtSetor" HorizontalAlignment="Left" Margin="483,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="327" Height="22"/>
-        <Button Content="Voltar" HorizontalAlignment="Left" Margin="110,407,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF77BBE0" FontFamily="Arial" FontWeight="Bold" />
-        <Button Content="Salvar" HorizontalAlignment="Left" Margin="605,411,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF77BBE0" FontFamily="Arial" FontWeight="Bold" />
+    <Grid Margin="-1,-1,1,1">
+        <Image Margin="375,-374,375,8" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="176,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="470" FontSize="18" FontWeight="Bold" Foreground="#FFFBFBFB"><Run Text="CONTROLAR ACESSO AO PERFIL"/><Run Language="pt-br" Text=" DO FUNCIONÁRIO"/></TextBlock>
+        <Label Content="NOME:" HorizontalAlignment="Left" Margin="189,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="117"/>
+        <TextBox HorizontalAlignment="Left" Margin="191,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="CPF:" HorizontalAlignment="Left" Margin="188,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="117"/>
+        <TextBox HorizontalAlignment="Left" Margin="191,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="RG:" HorizontalAlignment="Left" Margin="40,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="116"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="CONTATO:" HorizontalAlignment="Left" Margin="39,239,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="116"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="FUNÇÃO " HorizontalAlignment="Left" Margin="40,280,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="116"/>
+        <TextBox HorizontalAlignment="Left" Margin="43,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="SETOR:" HorizontalAlignment="Left" Margin="439,241,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="116"/>
+        <TextBox HorizontalAlignment="Left" Margin="441,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="E-MAIL:" HorizontalAlignment="Left" Margin="441,283,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="116"/>
+        <TextBox HorizontalAlignment="Left" Margin="439,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="SENHA:" HorizontalAlignment="Left" Margin="439,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="116"/>
+        <TextBox HorizontalAlignment="Left" Margin="441,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311" Height="22" TextBlock.FontFamily="Arial"/>
+        <Button Content="SALVAR" HorizontalAlignment="Left" Margin="636,370,0,0" VerticalAlignment="Top" Width="94" TextBlock.FontFamily="Arial" Background="#FF1E4B88" Height="32" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="470,370,0,0" VerticalAlignment="Top" Width="94" TextBlock.FontFamily="Arial" Background="#FF1E4B88" Height="32" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click"/>
+        <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="159,367,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF77BBE0" Background="#FF1E4B88" Height="36" Width="96"/>
+        <Image Height="NaN" Margin="43,66,627,243" Source="/person-icon-png-2.png.jpeg" Stretch="Fill" Width="NaN"/>
 
     </Grid>
 </Window>

@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="CadastrarProduto" Height="450" Width="800">
     <Grid x:Name="txtNome">
-        <TextBlock HorizontalAlignment="Left" Margin="40,10,0,0" TextWrapping="Wrap" Text="CADASTRAR PRODUTO" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="340" FontSize="16" FontWeight="Bold"/>
         <Label Content="NOME :" HorizontalAlignment="Left" Margin="70,63,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
 
 
@@ -32,14 +31,25 @@
         <Label Content="DATA DE FABRICAÇÃO:" HorizontalAlignment="Left" Margin="390,143,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
 
         <Label Content="DATA DE VALIDADE:" HorizontalAlignment="Left" Margin="635,143,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
-        <Button Content="CONSULTAR PRODUTO" HorizontalAlignment="Left" Margin="475,306,0,0" VerticalAlignment="Top" Width="217" TextBlock.FontFamily="Arial" Background="#FFB4E1F9" Height="25" FontWeight="Bold"/>
-        <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="133,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="Black" BorderBrush="#FF77BBE0" Background="#FF77BBE0" Height="25" Width="95"/>
-        <Button Content="SALVAR" HorizontalAlignment="Left" Margin="414,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="Black" BorderBrush="#FF77BBE0" Background="#FF77BBE0" Height="25" Width="96"/>
-        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="673,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="Black" BorderBrush="#FF77BBE0" Background="#FF77BBE0" Height="25" Width="95"/>
+        <Button Content="CONSULTAR PRODUTO" HorizontalAlignment="Left" Margin="475,306,0,0" VerticalAlignment="Top" Width="217" TextBlock.FontFamily="Arial" Background="#FF1E4B88" Height="25" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
+        <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="133,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF77BBE0" Background="#FF1E4B88" Height="25" Width="95"/>
+        <Button Content="SALVAR" HorizontalAlignment="Left" Margin="414,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="673,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="95"/>
         <TextBox HorizontalAlignment="Left" Margin="70,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="22" TextBlock.FontFamily="Arial"/>
         <Label Content="ORIGEM :" HorizontalAlignment="Left" Margin="71,169,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
         <TextBox x:Name="txtOrigem" HorizontalAlignment="Left" Margin="71,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="22" TextBlock.FontFamily="Arial"/>
         <DatePicker x:Name="dpFabricacao" HorizontalAlignment="Left" Margin="390,172,0,0" VerticalAlignment="Top" Width="174"/>
         <DatePicker x:Name="dpValidade" HorizontalAlignment="Left" Margin="612,172,0,0" VerticalAlignment="Top" Width="174"/>
+        <Image Margin="376,-376,374,9" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock HorizontalAlignment="Left" Margin="281,18,0,0" TextWrapping="Wrap" Text="CADASTRAR PRODUTO" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="340" FontSize="18" FontWeight="Bold" Foreground="#FFFBFBFB"/>
     </Grid>
 </Window>

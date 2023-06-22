@@ -6,7 +6,41 @@
         xmlns:local="clr-namespace:SistemaAGROAVE"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid x:Name="AGROAVE" Background="#FF294B79">
+        <Label x:Name="label" Content="AGR" HorizontalAlignment="Left" Height="222" Margin="95,144,0,0" VerticalAlignment="Top" Width="260" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="110" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black"/>
+        <Image Height="NaN" Margin="0,0,800,434"  Stretch="Fill" Width="NaN"/>
+        <Image Height="NaN" Margin="264,151,264,140"  Stretch="Fill" Width="NaN" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.997"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.341"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="AVE" HorizontalAlignment="Left" Height="222" Margin="440,144,0,0" VerticalAlignment="Top" Width="260" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="110" FontFamily="Segoe UI Black" FontWeight="Bold"/>
+        <Button Content="INICIAR" HorizontalAlignment="Left" Height="42" Margin="345,332,0,0" VerticalAlignment="Top" Width="90" Background="#FFFFFCF0" FontFamily="Arial Black" Click="Button_Click"/>
+        <Image Height="NaN" Margin="264,151,264,140"  Stretch="Fill" Width="NaN" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.997"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.341"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Height="NaN" Margin="338,170,357,138" Source="/Captura_da_Web_20-6-2023_92730_www.canva.com-removebg-preview.png" Stretch="Fill" Width="NaN" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.07"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
     </Grid>
 </Window>

@@ -95,6 +95,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="menu.xaml.cs">
+      <DependentUpon>menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Fornecedor.cs" />
@@ -130,6 +133,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CadastrarCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,7 +192,22 @@
     <Folder Include="Imagens\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icon perfil2.png" />
+    <Resource Include="Captura_da_Web_20-6-2023_92730_www.canva.com-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Captura da Web_20-6-2023_93621_www.canva.com.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Captura_da_Web_20-6-2023_10545_www.canva.com-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Captura_da_Web_20-6-2023_103014_www.canva.com-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="person-icon-png-2.png.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
