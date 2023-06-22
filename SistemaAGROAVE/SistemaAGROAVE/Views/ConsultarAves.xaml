@@ -1,0 +1,40 @@
+﻿<Window x:Class="SistemaAGROAVE.Views.ConsultarAves"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaAGROAVE.Views"
+        mc:Ignorable="d"
+        Title="ConsultarAves" Height="450" Width="800">
+    <Grid>
+        <Image Margin="375,-376,375,9" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="CONSULTAR AVES" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="172" FontSize="18" Height="37" Foreground="White"/>
+
+        <DataGrid x:Name="dataGridAves" Margin="0,105,0,65" AutoGenerateColumns="False" CanUserAddRows ="False"
+            CanUserDeleteRows="False" IsReadOnly= "True" AlternatingRowBackground="#FFE5E5E5" AlternationCount= "2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Observações" Binding= "{Binding Observacoes}" />
+                <DataGridTextColumn Header="Cor de indentificação" Binding="{Binding CorIdentificacao}" />
+                <DataGridTextColumn Header="Quantidade de obitos" Binding="{Binding QuantObito}" />
+                <DataGridTextColumn Header="Raça" Binding="{Binding Raca}" />
+                <DataGridTextColumn Header="Data de Entrada" Binding="{Binding DataEntrada}" />
+                <DataGridTextColumn Header="Lote" Binding="{Binding Lote}" />
+                <DataGridTextColumn Header="N° do Galpão" Binding="{Binding NumeroGalpao}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="GALPÃO N°:" HorizontalAlignment="Left" Margin="29,52,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+        <TextBox x:Name="txtGalpao" HorizontalAlignment="Left" Margin="29,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Height="22" TextBlock.FontFamily="Arial"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="370,72,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="95"/>
+        <Button Content="Excluir" HorizontalAlignment="Center" Margin="0,399,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96" />
+    </Grid>
+</Window>

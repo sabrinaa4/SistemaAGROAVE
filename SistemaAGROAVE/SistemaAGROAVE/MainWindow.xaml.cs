@@ -27,7 +27,8 @@ namespace SistemaAGROAVE
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            menu form = new menu();
+            form.ShowDialog();
         }
     }
 }
