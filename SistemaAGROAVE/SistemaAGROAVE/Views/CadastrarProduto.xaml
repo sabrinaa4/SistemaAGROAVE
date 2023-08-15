@@ -6,11 +6,13 @@
         xmlns:local="clr-namespace:SistemaAGROAVE.Views"
         mc:Ignorable="d"
         Title="CadastrarProduto" Height="450" Width="800">
-    <Grid x:Name="txtNome">
+    
+    <Viewbox Stretch="Uniform">
+      <Grid x:Name="txtNome">
         <Label Content="NOME :" HorizontalAlignment="Left" Margin="70,63,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
 
 
-        <Label Content="CÓDIGO DE BARRAS:" HorizontalAlignment="Left" Margin="71,116,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+        <Label Content="CÓDIGO DE BARRAS:" HorizontalAlignment="Left" Margin="70,116,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
         <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Margin="72,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" RenderTransformOrigin="0.5,0.5" TextBlock.FontFamily="Arial" Height="21">
             <TextBox.RenderTransform>
                 <TransformGroup>
@@ -28,9 +30,9 @@
         <Label Content="VALOR:" HorizontalAlignment="Left" Margin="496,63,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
         <TextBox x:Name="txtValor" HorizontalAlignment="Left" Margin="496,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="22" TextBlock.FontFamily="Arial"/>
 
-        <Label Content="DATA DE FABRICAÇÃO:" HorizontalAlignment="Left" Margin="390,143,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+        <Label Content="DATA DE FABRICAÇÃO:" HorizontalAlignment="Left" Margin="387,151,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
 
-        <Label Content="DATA DE VALIDADE:" HorizontalAlignment="Left" Margin="635,143,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+        <Label Content="DATA DE VALIDADE:" HorizontalAlignment="Left" Margin="617,153,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
         <Button x:Name="btnConsutarProd" Content="CONSULTAR PRODUTO" HorizontalAlignment="Left" Margin="475,306,0,0" VerticalAlignment="Top" Width="217" TextBlock.FontFamily="Arial" Background="#FF1E4B88" Height="25" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="btnConsutarProd_Click"/>
         <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="133,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF77BBE0" Background="#FF1E4B88" Height="25" Width="95" Click="Button_Click_1"/>
         <Button x:Name="btnSalvar" Content="SALVAR" HorizontalAlignment="Left" Margin="414,377,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96" Click="btnSalvar_Click"/>
@@ -51,5 +53,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="281,18,0,0" TextWrapping="Wrap" Text="CADASTRAR PRODUTO" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="340" FontSize="18" FontWeight="Bold" Foreground="#FFFBFBFB"/>
         <TextBox x:Name="txtDataFab" HorizontalAlignment="Left" Margin="387,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <TextBox x:Name="txtDataVal" HorizontalAlignment="Left" Margin="617,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
-    </Grid>
+       </Grid>
+    </Viewbox>
 </Window>
