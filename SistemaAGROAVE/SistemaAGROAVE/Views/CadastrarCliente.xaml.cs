@@ -38,12 +38,12 @@ namespace SistemaAGROAVE.Views
                 cliente.Rua = txtRua.Text;
                 cliente.Bairro = txtBairro.Text;
                 cliente.Municipio = txtMunicipio.Text;
-                cliente.Estado = txtEstado.Text;
+                cliente.Estado = cbEstado.Text;
                
                 ClienteDAO clienteDAO = new ClienteDAO();
                 clienteDAO.Insert(cliente);
                 
-                MessageBox.Show("O funcionário foi adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("O cliente foi adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
                 var result = MessageBox.Show("Deseja continuar?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.No)
                 {
@@ -59,7 +59,7 @@ namespace SistemaAGROAVE.Views
                     txtRua.Text = "";
                     txtBairro.Text = "";
                     txtMunicipio.Text = "";
-                    txtEstado.Text = "";
+                    cbEstado.Text = "";
                    
                 }
             }
@@ -89,7 +89,7 @@ namespace SistemaAGROAVE.Views
             txtRua.Text = "";
             txtBairro.Text = "";
             txtMunicipio.Text = "";
-            txtEstado.Text = "";
+            cbEstado.Text = "";
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

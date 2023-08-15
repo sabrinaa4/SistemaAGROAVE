@@ -45,7 +45,7 @@ namespace SistemaAGROAVE.Views
                 funcionario.Rg = txtRg.Text;
                 funcionario.Cpf = txtCpf.Text;
                 funcionario.Telefone = txtTelefone.Text;
-                funcionario.CarteiraTrabalho = txtCarteira.Text;
+                funcionario.CarteiraTrabalho = txtCarteiraTrabalho.Text;
                 funcionario.Funcao = txtFuncao.Text;
                 funcionario.Setor = txtSetor.Text;
                 funcionario.Numero = txtNumero.Text;
@@ -67,10 +67,10 @@ namespace SistemaAGROAVE.Views
                 else
                 {
                     txtNome.Text = "";
-                    txtCpf.Text = "";
                     txtRg.Text = "";
+                    txtCpf.Text = "";
                     txtTelefone.Text = "";
-                    txtCarteira.Text = "";
+                    txtCarteiraTrabalho.Text = "";
                     txtFuncao.Text ="";
                     txtSetor.Text = "";
                     txtNumero.Text = "";
@@ -87,11 +87,6 @@ namespace SistemaAGROAVE.Views
                 MessageBox.Show(ex.Message,"Não Executado", MessageBoxButton.OK,MessageBoxImage.Error);
 
             }
-
-
-
-
-
         }
 
         private void btnConsultarFun_Click(object sender, RoutedEventArgs e)
@@ -102,10 +97,28 @@ namespace SistemaAGROAVE.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Deseja realmente Voltar?", "App - Registro de Aves", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show("Deseja realmente Voltar?", "App - Cadastrar Funcionário", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
                 this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Deseja realmente Cancelar?", "App - Cadastrar Funcionário", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            txtNome.Text = " ";
+            txtRg.Text = " ";
+            txtCpf.Text = " ";
+            txtTelefone.Text = " ";
+            txtCarteiraTrabalho.Text = " ";
+            txtFuncao.Text = " ";
+            txtSetor.Text = " ";
+            txtNumero.Text = " ";
+            txtRua.Text = " ";
+            txtBairro.Text = " ";
+            txtMunicipio.Text = " ";
+            txtEstado1.Text = " ";
         }
     }
 }

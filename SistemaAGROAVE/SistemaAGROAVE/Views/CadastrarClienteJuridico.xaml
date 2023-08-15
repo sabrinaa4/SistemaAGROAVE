@@ -1,13 +1,13 @@
-﻿<Window x:Class="SistemaAGROAVE.Views.CadastrarCliente"
+﻿<Window x:Class="SistemaAGROAVE.Views.CadastrarClienteJuridico"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaAGROAVE.Views"
         mc:Ignorable="d"
-        Title="CadastrarCliente" Height="479" Width="855">
+        Title="CadastrarClienteJuridico" Height="450" Width="800">
     <Grid>
-        <Image Margin="394,-417,411,0" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+        <Image Margin="377,-377,373,8" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,16 +17,25 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-
-        <Label Content="NOME:" HorizontalAlignment="Left" Margin="57,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="49"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,15,0,0" TextWrapping="Wrap" Text="CADASTRAR CLIENTE - PESSOA JURÍDICA" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="386" FontSize="18" FontWeight="Bold" Foreground="#FFFBFBFB" RenderTransformOrigin="0.226,0.663">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.001"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Label Content="NOME FANTASIA:" HorizontalAlignment="Left" Margin="57,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="126"/>
         <Label Content="E-MAIL:" HorizontalAlignment="Left" Margin="57,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="54"/>
-        <Label Content="CPF:" HorizontalAlignment="Left" Margin="436,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="37"/>
+        <Label Content="CNPJ:" HorizontalAlignment="Left" Margin="436,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="53"/>
         <Label Content="TELEFONE:" HorizontalAlignment="Left" Margin="436,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="76"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="57,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22"/>
+        <TextBox x:Name="txtNomeFantasia" HorizontalAlignment="Left" Margin="57,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22"/>
         <TextBox x:Name="txtTelefone" HorizontalAlignment="Left" Margin="436,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24" Background="White"/>
         <TextBox HorizontalAlignment="Left" Margin="57,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
-        <TextBox x:Name="txtCpf" HorizontalAlignment="Left" Margin="436,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22"/>
-        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="768" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="txtCnpj" HorizontalAlignment="Left" Margin="436,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22"/>
+        <Rectangle HorizontalAlignment="Left" Height="1" Margin="44,222,0,0" Stroke="Black" VerticalAlignment="Top" Width="768" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -48,41 +57,40 @@
         <TextBox x:Name="txtRua" HorizontalAlignment="Left" Margin="57,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="22"/>
         <Label Content="Nº:" HorizontalAlignment="Left" Margin="322,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="26"/>
         <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="322,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="97" Height="22"/>
-        <Button Content="Voltar" HorizontalAlignment="Left" Margin="120,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_1"/>
-        <Button Content="Salvar" Click="BtnSalvar_Click" HorizontalAlignment="Left" Margin="694,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
+        <Button Content="Voltar" HorizontalAlignment="Left" Margin="76,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_1"/>
+        <Button Content="Salvar" Click="BtnSalvar_Click" HorizontalAlignment="Center" Margin="0,387,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
         <Button x:Name="btnConsultarCli" Content="Consultar Cliente" HorizontalAlignment="Left" Margin="503,184,0,0" VerticalAlignment="Top" Width="180" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="btnConsultarCli_Click"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="526,391,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click"/>
-        <Label Content="CADASTRAR CLIENTE - PESSOA FÍSICA " HorizontalAlignment="Left" Margin="235,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="18" Height="37" Foreground="White"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="601,391,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click"/>
+        <ComboBox x:Name="txtEstado" Padding="5" Width="165" HorizontalAlignment="Right" Margin="0,266,578,143" Height="25">
+            <Label Content="Acre"/>
+            <Label Content="Alagoas"/>
+            <Label Content="Amapá"/>
+            <Label Content="Amazonas"/>
+            <Label Content="Bahia"/>
+            <Label Content="Ceára"/>
+            <Label Content="Distrito Federal"/>
+            <Label Content="Espírito Santos"/>
+            <Label Content="Goiás"/>
+            <Label Content="Maranhão"/>
+            <Label Content="Mato Grosso"/>
+            <Label Content="Mato Grosso do Sul"/>
+            <Label Content="Minas Gerais"/>
+            <Label Content="Pará"/>
+            <Label Content="Paraíba"/>
+            <Label Content="Paraná"/>
+            <Label Content="Pernambuco"/>
+            <Label Content="Piauí"/>
+            <Label Content="Rio de Janeiro"/>
+            <Label Content="Rio Grande do Norte"/>
+            <Label Content="Rio Grande do Sul"/>
+            <Label Content="Rondônia"/>
+            <Label Content="Roraima"/>
+            <Label Content="Santa Catarina"/>
+            <Label Content="São Paulo"/>
+            <Label Content="Sergipe"/>
+            <Label Content="Tocantis"/>
+        </ComboBox>
         <TextBox x:Name="txtMunicipio" HorizontalAlignment="Left" Margin="309,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="22"/>
-        <ComboBox HorizontalAlignment="Left" Margin="63,266,0,0" VerticalAlignment="Top" Width="183"/>
-        <ComboBoxItem>AC</ComboBoxItem>
-        <ComboBoxItem>AL</ComboBoxItem>
-        <ComboBoxItem>AP</ComboBoxItem>
-        <ComboBoxItem>AM</ComboBoxItem>
-        <ComboBoxItem>BA</ComboBoxItem>
-        <ComboBoxItem>CE</ComboBoxItem>
-        <ComboBoxItem>DF</ComboBoxItem>
-        <ComboBoxItem>ES</ComboBoxItem>
-        <ComboBoxItem>GO</ComboBoxItem>
-        <ComboBoxItem>MA</ComboBoxItem>
-        <ComboBoxItem>MT</ComboBoxItem>
-        <ComboBoxItem>MS</ComboBoxItem>
-        <ComboBoxItem>MG</ComboBoxItem>
-        <ComboBoxItem>PA</ComboBoxItem>
-        <ComboBoxItem>PB</ComboBoxItem>
-        <ComboBoxItem>PR</ComboBoxItem>
-        <ComboBoxItem>PE</ComboBoxItem>
-        <ComboBoxItem>PI</ComboBoxItem>
-        <ComboBoxItem>RJ</ComboBoxItem>
-        <ComboBoxItem>RN</ComboBoxItem>
-        <ComboBoxItem>RS</ComboBoxItem>
-        <ComboBoxItem>RO</ComboBoxItem>
-        <ComboBoxItem>RR</ComboBoxItem>
-        <ComboBoxItem>SC</ComboBoxItem>
-        <ComboBoxItem>SP</ComboBoxItem>
-        <ComboBoxItem>SE</ComboBoxItem>
-        <ComboBoxItem>TO</ComboBoxItem>
-        
 
     </Grid>
 </Window>

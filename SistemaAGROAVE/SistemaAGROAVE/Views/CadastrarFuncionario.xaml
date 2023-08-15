@@ -24,7 +24,7 @@
         <TextBox x:Name="txtSalario" HorizontalAlignment="Left" Margin="58,232,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
         <TextBox x:Name="txtRg" HorizontalAlignment="Left" Margin="58,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
         <Label Content="CARTEIRA DE TRABALHO:" HorizontalAlignment="Left" Margin="53,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="177"/>
-        <TextBox x:Name="txtCarteira" HorizontalAlignment="Left" Margin="58,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+        <TextBox x:Name="txtCarteiraTrabalho" HorizontalAlignment="Left" Margin="58,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
         <Label Content="CPF:" HorizontalAlignment="Left" Margin="437,49,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="37"/>
         <Label Content="TELEFONE:" HorizontalAlignment="Left" Margin="437,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="76"/>
         <TextBox x:Name="txtFuncao" HorizontalAlignment="Left" Margin="437,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Height="24" Background="White"/>
@@ -52,7 +52,7 @@
         <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="330,381,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="98" Height="22"/>
         <Button Content="Voltar" HorizontalAlignment="Left" Margin="119,420,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click"/>
         <Button Content="Salvar" Click ="BtnSalvar_Click"  HorizontalAlignment="Left" Margin="390,416,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="665,420,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="665,420,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_1"/>
         <Label Content="CADASTRAR FUNCIONARIO" HorizontalAlignment="Left" Margin="292,11,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="18" Height="37" Foreground="White"/>
         <Label Content="SALÁRIO:" HorizontalAlignment="Left" Margin="58,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="90"/>
         <TextBox x:Name="txtSetor" HorizontalAlignment="Left" Margin="437,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="234" Height="24" Background="White" TextChanged="TextBox_TextChanged"/>
