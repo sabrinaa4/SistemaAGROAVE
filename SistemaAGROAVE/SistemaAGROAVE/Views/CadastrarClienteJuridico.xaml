@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CadastrarClienteJuridico" Height="450" Width="800">
     <Grid>
-        <Image Margin="377,-377,373,8" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+        <Image Margin="375,-379,375,5" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,7 +17,7 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock HorizontalAlignment="Left" Margin="228,15,0,0" TextWrapping="Wrap" Text="CADASTRAR CLIENTE - PESSOA JURÍDICA" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="386" FontSize="18" FontWeight="Bold" Foreground="#FFFBFBFB" RenderTransformOrigin="0.226,0.663">
+        <TextBlock HorizontalAlignment="Left" Margin="216,13,0,0" TextWrapping="Wrap" Text="CADASTRAR CLIENTE - PESSOA JURÍDICA" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="386" FontSize="18" FontWeight="Bold" Foreground="#FFFBFBFB" RenderTransformOrigin="0.226,0.663">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -57,40 +57,40 @@
         <TextBox x:Name="txtRua" HorizontalAlignment="Left" Margin="57,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="22"/>
         <Label Content="Nº:" HorizontalAlignment="Left" Margin="322,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="26"/>
         <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="322,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="97" Height="22"/>
-        <Button Content="Voltar" HorizontalAlignment="Left" Margin="76,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_1"/>
-        <Button Content="Salvar" Click="BtnSalvar_Click" HorizontalAlignment="Center" Margin="0,387,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
-        <Button x:Name="btnConsultarCli" Content="Consultar Cliente" HorizontalAlignment="Left" Margin="503,184,0,0" VerticalAlignment="Top" Width="180" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="btnConsultarCli_Click"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="601,391,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click"/>
-        <ComboBox x:Name="txtEstado" Padding="5" Width="165" HorizontalAlignment="Right" Margin="0,266,578,143" Height="25">
-            <Label Content="Acre"/>
-            <Label Content="Alagoas"/>
-            <Label Content="Amapá"/>
-            <Label Content="Amazonas"/>
-            <Label Content="Bahia"/>
-            <Label Content="Ceára"/>
-            <Label Content="Distrito Federal"/>
-            <Label Content="Espírito Santos"/>
-            <Label Content="Goiás"/>
-            <Label Content="Maranhão"/>
-            <Label Content="Mato Grosso"/>
-            <Label Content="Mato Grosso do Sul"/>
-            <Label Content="Minas Gerais"/>
-            <Label Content="Pará"/>
-            <Label Content="Paraíba"/>
-            <Label Content="Paraná"/>
-            <Label Content="Pernambuco"/>
-            <Label Content="Piauí"/>
-            <Label Content="Rio de Janeiro"/>
-            <Label Content="Rio Grande do Norte"/>
-            <Label Content="Rio Grande do Sul"/>
-            <Label Content="Rondônia"/>
-            <Label Content="Roraima"/>
-            <Label Content="Santa Catarina"/>
-            <Label Content="São Paulo"/>
-            <Label Content="Sergipe"/>
-            <Label Content="Tocantis"/>
-        </ComboBox>
+        <Button Content="Voltar" HorizontalAlignment="Left" Margin="76,391,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click" />
+        <Button Content="Salvar"  HorizontalAlignment="Center" Margin="0,387,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_1"/>
+        <Button x:Name="btnConsultarCli" Content="Consultar Cliente" HorizontalAlignment="Left" Margin="503,184,0,0" VerticalAlignment="Top" Width="180" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" />
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="601,387,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_2" />
         <TextBox x:Name="txtMunicipio" HorizontalAlignment="Left" Margin="309,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165" Height="22"/>
+        <ComboBox x:Name="cbEstado" HorizontalAlignment="Left" Margin="59,264,0,0" VerticalAlignment="Top" Width="186" Height="22">
+            <ComboBoxItem Content="Acre"/>
+            <ComboBoxItem Content="Alagoas"/>
+            <ComboBoxItem Content="Amapá"/>
+            <ComboBoxItem Content="Amazonas"/>
+            <ComboBoxItem Content="Bahia"/>
+            <ComboBoxItem Content="Ceará"/>
+            <ComboBoxItem Content="Distrito Federal"/>
+            <ComboBoxItem Content="Espírito Santo"/>
+            <ComboBoxItem Content="Goiás"/>
+            <ComboBoxItem Content="Maranhão"/>
+            <ComboBoxItem Content="Mato Grosso"/>
+            <ComboBoxItem Content="Mato Grosso do Sul"/>
+            <ComboBoxItem Content="Minas Gerais"/>
+            <ComboBoxItem Content="Pará"/>
+            <ComboBoxItem Content="Paraíba"/>
+            <ComboBoxItem Content="Paraná"/>
+            <ComboBoxItem Content="Pernambuco"/>
+            <ComboBoxItem Content="Piauí"/>
+            <ComboBoxItem Content="Rio de Janeiro"/>
+            <ComboBoxItem Content="Rio Grande do Norte"/>
+            <ComboBoxItem Content="Rio Grande do Sul"/>
+            <ComboBoxItem Content="Rondônia"/>
+            <ComboBoxItem Content="Roraima"/>
+            <ComboBoxItem Content="Santa Catarina"/>
+            <ComboBoxItem Content="São Paulo"/>
+            <ComboBoxItem Content="Sergipe"/>
+            <ComboBoxItem Content="Tocantins"/>
+        </ComboBox>
 
     </Grid>
 </Window>

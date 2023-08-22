@@ -51,7 +51,7 @@ namespace SistemaAGROAVE
 
         private void btnCadastrarCliente_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarCliente form = new CadastrarCliente();
+            CadastrarClienteEscolher form = new CadastrarClienteEscolher();
             form.ShowDialog();
         }
 
@@ -65,6 +65,13 @@ namespace SistemaAGROAVE
         {
             RegistrarAves form = new RegistrarAves();
             form.ShowDialog();
+        }
+
+        private void btnVoltar(object sender, RoutedEventArgs e) {
+            //MessageBoxResult result = MessageBox.Show("Deseja realmente Voltar?", "App - AGROAVE", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            //if (result == MessageBoxResult.Yes)
+            //    this.Close();
         }
     }
 }

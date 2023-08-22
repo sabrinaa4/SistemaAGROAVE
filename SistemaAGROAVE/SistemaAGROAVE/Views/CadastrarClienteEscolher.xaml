@@ -1,0 +1,33 @@
+﻿<Window x:Class="SistemaAGROAVE.Views.CadastrarClienteEscolher"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaAGROAVE.Views"
+        mc:Ignorable="d"
+        Title="CadastrarClienteEscolher" Height="450" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="198*"/>
+        </Grid.RowDefinitions>
+        <Image Margin="374,-401,371,-21" Source="/Image1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Height="NaN" Grid.RowSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.07" ScaleY="0.935"/>
+                    <SkewTransform AngleX="0.002"/>
+                    <RotateTransform Angle="-90.017"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Label Content="CADASTRAR CLIENTE " HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="209" FontSize="18" Height="37" Foreground="White" Grid.RowSpan="2"/>
+        <Label Content="INFORME QUAL CLIENTE DESEJA CADASTRAR:" HorizontalAlignment="Left" Margin="193,100,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial" Foreground="Black" FontSize="15"/>
+        <RadioButton x:Name="RbTipoPF" GroupName="TipoPessoa" Content="Pessoa Física" HorizontalAlignment="Left" Margin="213,179,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" />
+        <RadioButton x:Name="RbTipoPJ" GroupName="TipoPessoa" Content="Pessoa Jurídica" HorizontalAlignment="Left" Margin="213,238,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Arial" FontSize="14" FontWeight="Bold" />
+        <Button Content="Avançar"  HorizontalAlignment="Left" Margin="570,335,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="btAvancar" Grid.Row="1"/>
+        <Button Content="Voltar"  HorizontalAlignment="Left" Margin="104,339,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click" Grid.Row="1" />
+
+    </Grid>
+</Window>

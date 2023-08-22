@@ -35,7 +35,7 @@
         <Button Content="RECEBIMENTO" HorizontalAlignment="Left" Height="42" Margin="565,351,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
         <Image Height="NaN" Margin="-24,109,716,195" Source="/Captura_da_Web_20-6-2023_10545_www.canva.com-removebg-preview.png" Stretch="Fill" Width="NaN"/>
         <Button HorizontalAlignment="Left" Height="98" Margin="-20,274,0,0" VerticalAlignment="Top" Width="127" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14">
-            <Image x:Name="btnVoltar" Height="87" Source="/Captura_da_Web_20-6-2023_103014_www.canva.com-removebg-preview (1).png" Stretch="Fill" Width="101"/>
+            <Image x:Name="btnVoltar2" Height="87" Source="/Captura_da_Web_20-6-2023_103014_www.canva.com-removebg-preview (1).png" Stretch="Fill" Width="101"/>
         </Button>
 
     </Grid>

@@ -26,15 +26,6 @@ namespace SistemaAGROAVE.Views
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void BtSalvar(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
@@ -52,7 +43,7 @@ namespace SistemaAGROAVE.Views
                 funcionario.Rua = txtRua.Text;
                 funcionario.Bairro = txtBairro.Text;
                 funcionario.Municipio = txtMunicipio.Text;
-                funcionario.Estado = txtEstado1.Text;
+                funcionario.Estado = cbEstado.Text;
                 funcionario.Salario = Convert.ToDouble(txtSalario.Text);
 
                 FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
@@ -77,7 +68,7 @@ namespace SistemaAGROAVE.Views
                     txtRua.Text = "";
                     txtBairro.Text = "";
                     txtMunicipio.Text = "";
-                    txtEstado1.Text = "";
+                    cbEstado.Text = "";
                     txtSalario.Text = "";
                 }
             }
@@ -118,7 +109,7 @@ namespace SistemaAGROAVE.Views
             txtRua.Text = " ";
             txtBairro.Text = " ";
             txtMunicipio.Text = " ";
-            txtEstado1.Text = " ";
+            cbEstado.Text = " ";
         }
     }
 }

@@ -39,7 +39,7 @@ namespace SistemaAGROAVE.Views
                 fornecedor.Rua = txtRua.Text;
                 fornecedor.Bairro = txtBairro.Text;
                 fornecedor.Municipio = txtMunicipio.Text;
-                fornecedor.Estado = txtEstado.Text;
+                fornecedor.Estado = cbEstado.Text;
 
                 FornecedorDAO funcionarioDAO = new FornecedorDAO();
                 funcionarioDAO.Insert(fornecedor);
@@ -61,7 +61,7 @@ namespace SistemaAGROAVE.Views
                     txtRua.Text = ";";
                     txtBairro.Text = ";";
                     txtMunicipio.Text = ";";
-                    txtEstado.Text = ";";
+                    cbEstado.Text = ";";
                 }
             }
             catch (Exception ex)
@@ -92,7 +92,7 @@ namespace SistemaAGROAVE.Views
             txtRua.Text = " ";
             txtBairro.Text = " ";
             txtMunicipio.Text = " ";
-            txtEstado.Text = " ";
+            cbEstado.Text = " ";
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
