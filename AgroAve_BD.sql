@@ -239,7 +239,7 @@ insert into Venda values (null, '79.077.089/0001-44', '878.071.600-80', '2023-06
 
 create table Caixa(
 id_cai int primary key auto_increment,
-mumero_cai int,
+numero_cai int,
 data_cai date,
 horario_abertura_cai time,
 horario_fechamento_cai time,
