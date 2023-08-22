@@ -40,7 +40,7 @@
         <TextBox x:Name="txtNome1" HorizontalAlignment="Left" Margin="70,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="22" TextBlock.FontFamily="Arial"/>
         <Label Content="ORIGEM :" HorizontalAlignment="Left" Margin="71,169,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
         <TextBox x:Name="txtOrigem" HorizontalAlignment="Left" Margin="71,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="22" TextBlock.FontFamily="Arial"/>
-        <Image Margin="389,-389,361,-4" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+        <Image Margin="374,-387,376,-6" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
