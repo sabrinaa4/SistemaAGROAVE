@@ -103,8 +103,12 @@
     <Compile Include="Models\Caixa.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
+    <Compile Include="Models\ClienteJuridico.cs" />
+    <Compile Include="Models\ClienteJuridicoDAO.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\FornecedorDAO.cs" />
+    <Compile Include="Models\Producao.cs" />
+    <Compile Include="Models\ProducaoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\ProdutoDAO.cs" />
     <Compile Include="Views\CadastrarCaixa.xaml.cs">
@@ -134,17 +138,26 @@
     <Compile Include="Views\ConsultarCliente.xaml.cs">
       <DependentUpon>ConsultarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConsultarClienteJuridico.xaml.cs">
+      <DependentUpon>ConsultarClienteJuridico.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConsultarFornecedor.xaml.cs">
       <DependentUpon>ConsultarFornecedor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarFuncionario.xaml.cs">
       <DependentUpon>ConsultarFuncionario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConsultarProducao.xaml.cs">
+      <DependentUpon>ConsultarProducao.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConsultarProduto.xaml.cs">
       <DependentUpon>ConsultarProduto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarAves.xaml.cs">
       <DependentUpon>RegistrarAves.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegistrarProducao.xaml.cs">
+      <DependentUpon>RegistrarProducao.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -200,6 +213,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ConsultarClienteJuridico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConsultarFornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -208,11 +225,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ConsultarProducao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConsultarProduto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RegistrarAves.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RegistrarProducao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="SistemaAGROAVE.Views.RegistrarProducao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaAGROAVE.Views"
+        mc:Ignorable="d"
+        Title="RegistrarProducao" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="txtNome" Margin="0,16,0,16">
+            <Label Content="QUANTIDADE DE AVES:" HorizontalAlignment="Left" Margin="39,63,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+
+
+            <Label Content="PRODUÇÃO DIÁRIA:" HorizontalAlignment="Left" Margin="39,116,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+            <TextBox x:Name="txtProducaoDiaria" HorizontalAlignment="Left" Margin="44,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" RenderTransformOrigin="0.5,0.5" TextBlock.FontFamily="Arial" Height="21">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.044"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+
+            <Label Content="DESCRIÇÃO:" HorizontalAlignment="Left" Margin="48,0,0,0" VerticalAlignment="Center" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+            <TextBox x:Name="txtDescricao" HorizontalAlignment="Left" Margin="48,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260" Height="98" TextBlock.FontFamily="Arial"/>
+
+            <Label Content="DATA:" HorizontalAlignment="Left" Margin="562,63,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+            <TextBox x:Name="txtData" HorizontalAlignment="Left" Margin="562,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="22" TextBlock.FontFamily="Arial"/>
+
+            <Label Content="PRODUÇÃO MENSAL:" HorizontalAlignment="Center" Margin="0,116,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+
+            <Label Content="PRODUÇÃO REAL:" HorizontalAlignment="Left" Margin="562,177,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+            <Button x:Name="btnConsutarProd" Content="CONSULTAR PRODUÇÃO" HorizontalAlignment="Left" Margin="465,291,0,0" VerticalAlignment="Top" Width="217" TextBlock.FontFamily="Arial" Background="#FF1E4B88" Height="25" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="btnConsutarProd_Click"/>
+            <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="73,367,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF77BBE0" Background="#FF1E4B88" Height="25" Width="95" Click="Button_Click_1"/>
+            <Button x:Name="btnSalvar" Content="SALVAR" HorizontalAlignment="Left" Margin="618,366,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
+            <Button Content="CANCELAR" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96" Click="Button_Click" RenderTransformOrigin="-1.264,0.154"/>
+            <TextBox x:Name="txtQtdAves" HorizontalAlignment="Left" Margin="48,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="22" TextBlock.FontFamily="Arial"/>
+            <Label Content="PRODUÇÃO SEMANAL:" HorizontalAlignment="Left" Margin="562,116,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="txtProducaoSemanal" HorizontalAlignment="Left" Margin="562,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="22" TextBlock.FontFamily="Arial"/>
+            <Image Margin="374,-395,376,-14" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.018"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="REGISTRAR PRODUÇÃO" VerticalAlignment="Top" FontFamily="Arial" Height="24" Width="230" FontSize="18" FontWeight="Bold" Foreground="#FFFBFBFB" RenderTransformOrigin="0.333,0.552"/>
+            <TextBox x:Name="txtProducaoMensal" HorizontalAlignment="Left" Margin="331,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="20"/>
+            <TextBox x:Name="txtProducaoReal" HorizontalAlignment="Left" Margin="562,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+            <Label Content="PRODUÇÃO ESPERADA:" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+            <TextBox x:Name="txtProducaoEsperada" HorizontalAlignment="Left" Margin="331,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="20"/>
+        </Grid>
+
+    </Grid>
+</Window>

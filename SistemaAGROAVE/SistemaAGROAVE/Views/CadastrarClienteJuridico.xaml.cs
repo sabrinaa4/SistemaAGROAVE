@@ -39,19 +39,19 @@ namespace SistemaAGROAVE.Views
 
             try
             {
-                Cliente cliente = new Cliente();
-                cliente.Nome = txtNomeFantasia.Text;
-                cliente.Email = txtEmail.Text;
-                cliente.Cpf = txtCnpj.Text;
-                cliente.Telefone = txtTelefone.Text;
-                cliente.Numero = Convert.ToInt16(txtNumero.Text);
-                cliente.Rua = txtRua.Text;
-                cliente.Bairro = txtBairro.Text;
-                cliente.Municipio = txtMunicipio.Text;
-                cliente.Estado = cbEstado.Text;
+                ClienteJuridico clienteJuridico = new ClienteJuridico();
+                clienteJuridico.NomeFantasia = txtNomeFantasia.Text;
+                clienteJuridico.Email = txtEmail.Text;
+                clienteJuridico.Cnpj = txtCnpj.Text;
+                clienteJuridico.Telefone = txtTelefone.Text;
+                clienteJuridico.Numero = Convert.ToInt16(txtNumero.Text);
+                clienteJuridico.Rua = txtRua.Text;
+                clienteJuridico.Bairro = txtBairro.Text;
+                clienteJuridico.Municipio = txtMunicipio.Text;
+                clienteJuridico.Estado = cbEstado.Text;
 
-                ClienteDAO clienteDAO = new ClienteDAO();
-                clienteDAO.Insert(cliente);
+                ClienteJuridicoDAO clienteJuridicoDAO = new ClienteJuridicoDAO();
+                clienteJuridicoDAO.Insert(clienteJuridico);
 
                 MessageBox.Show("O cliente foi adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
                 var result = MessageBox.Show("Deseja continuar?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -94,6 +94,12 @@ namespace SistemaAGROAVE.Views
             txtBairro.Text = "";
             txtMunicipio.Text = "";
             cbEstado.Text = "";
+        }
+
+        private void btnConsultarCli_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarClienteJuridico form = new ConsultarClienteJuridico();
+            form.ShowDialog();
         }
     }
 }

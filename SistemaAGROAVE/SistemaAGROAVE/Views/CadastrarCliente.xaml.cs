@@ -79,7 +79,7 @@ namespace SistemaAGROAVE.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Deseja realmente Cancelar?", "App - Cadastrar Cliente - Físico", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show("Deseja realmente Cancelar?", "App - Cadastrar Cliente - Jurídico", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             txtNome.Text = "";
             txtEmail.Text = "";
@@ -94,7 +94,7 @@ namespace SistemaAGROAVE.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Deseja realmente Voltar?", "App - Cadastrar Cliente - Físico", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult result = MessageBox.Show("Deseja realmente Voltar?", "App - Cadastrar Cliente - Jurídico", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
                 this.Close();

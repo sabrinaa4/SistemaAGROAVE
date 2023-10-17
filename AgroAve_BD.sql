@@ -16,13 +16,33 @@ municipio_cli varchar(100),
 estado_cli varchar(100)
 );
 
-Select * From Cliente;
-
 insert into Cliente values (null, 'Erasmus Kidd', 'erasmuskidd4401@hotmail.com', '111.222.333-44', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
 insert into Cliente values (null, 'João Silva', 'joao.silva@email.com', '886.983.010-10', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
 insert into Cliente values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
 insert into Cliente values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
 insert into Cliente values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
+
+create table ClienteJuridico(
+id_cli int primary key auto_increment,
+nomeFantasia_cli varchar(100),
+email_cli varchar(100),
+cnpj_cli varchar(50),
+telefone_cli varchar(50),
+numero_casa_cli int,
+rua_cli varchar(100),
+bairro_cli varchar(100),
+municipio_cli varchar(100),
+estado_cli varchar(100)
+);
+
+
+Select * From Cliente;
+
+insert into ClienteJuridico values (null, 'empresa unaa', 'empresaunaa4401@hotmail.com', '27.776.263/0001-43', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
+insert into ClienteJuridico values (null, 'empresas e negócios', 'empresas.negocios@email.com', '52.226.055/0001-18', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
+insert into ClienteJuridico values (null, 'espaço prospeprar', 'espaço.prosperar@email.com', '76.538.288/0001-14', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
+insert into ClienteJuridico values (null, 'empresa dedicação', 'empresa.dedicaçao@email.com', '25.175.967/0001-35',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
+insert into ClienteJuridico values (null, 'empresa viver', 'empresaviver@email.com', '88.120.053/0001-97',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
 
 create table Perfil_Usuario(
 id_perf int primary key auto_increment,
