@@ -1,3 +1,5 @@
+drop schema sistema_agroave_bd;
+
 create database sistema_agroave_bd;
 use sistema_agroave_bd;
 
@@ -14,19 +16,19 @@ municipio_cli varchar(100),
 estado_cli varchar(100)
 );
 
-Select * From Cliente;
+Select * From Cliente_Fisico;
 
-insert into Cliente values (null, 'Erasmus Kidd', 'erasmuskidd4401@hotmail.com', '111.222.333-44', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
-insert into Cliente values (null, 'João Silva', 'joao.silva@email.com', '886.983.010-10', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
-insert into Cliente values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
-insert into Cliente values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
-insert into Cliente values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
+insert into Cliente_Fisico values (null, 'Erasmus Kidd', 'erasmuskidd4401@hotmail.com', '111.222.333-44', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
+insert into Cliente_Fisico values (null, 'João Silva', 'joao.silva@email.com', '886.983.010-10', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
+insert into Cliente_Fisico values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
+insert into Cliente_Fisico values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
+insert into Cliente_Fisico values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
 
 create table Cliente_Juridico(
 id_clij int primary key auto_increment,
 nome_fantasia_clij varchar(100),
 email_clij varchar(100),
-cnpj_clij varchar(14),
+cnpj_clij varchar(100),
 telefone_clij varchar(50),
 numero_casa_clij int,
 rua_clij varchar(100),
@@ -37,9 +39,9 @@ estado_clij varchar(100)
 
 Select * from Cliente_Juridico;
 
-insert into Cliente_Juridico values (null, 'Varejo Baesso', 'varejo.baesso@gmail.com', '33.235.217/0001-30', '(77) 99336-8343', 123, 'Lauro de Freitas', 'Buraquinho', 'Lauro de Freitas', 'Bahia');
-insert into Cliente_Juridico values (null, 'Propaganda Miranda', 'propaganda.miranda@gmail.com', '15.283.118/0001-41', '(88) 2401-4424', 2356, 'Rua Valdetário Mota', 'Vicente Pinzon', 'Fortaleza', 'Ceará');
-insert into Cliente_Juridico values (null, 'Brechó Matta', 'brecho.matta@gmail.com', '00.761.255/0001-77', '(49) 2561-3865', 2504, 'Rua João Faustino dos Santos', 'São Pedro', 'Lages', 'Santa Catarina');
+insert into Cliente_Juridico values (null, 'Varejo Baesso', 'varejo.baesso@gmail.com', '33.235.217/0001-3', '(77) 99336-8343', 123, 'Lauro de Freitas', 'Buraquinho', 'Lauro de Freitas', 'Bahia');
+insert into Cliente_Juridico values (null, 'Propaganda Miranda', 'propaganda.miranda@gmail.com', '15.283.118/0001-4', '(88) 2401-4424', 2356, 'Rua Valdetário Mota', 'Vicente Pinzon', 'Fortaleza', 'Ceará');
+insert into Cliente_Juridico values (null, 'Brechó Matta', 'brecho.matta@gmail.com', '00.761.255/0001-7', '(49) 2561-3865', 2504, 'Rua João Faustino dos Santos', 'São Pedro', 'Lages', 'Santa Catarina');
 
 create table Perfil_Usuario(
 id_perf int primary key auto_increment,
@@ -244,16 +246,18 @@ parcela_ven int,
 id_ent_fk int,
 foreign key(id_ent_fk) references Entrega (id_ent),
 id_cli_fk int,
-foreign key(id_cli_fk) references Cliente (id_cli),
+foreign key(id_cli_fk) references Cliente_Fisico (id_cli),
+id_clij_fk int,
+foreign key(id_clij_fk) references Cliente_Juridico (id_clij),
 id_fun_fk int,
 foreign key(id_fun_fk) references Funcionario (id_fun)
 );
 
 #Select * From Venda;
 
-insert into Venda values (null, '66.259.745/0001-88', '719.172.960-02', '2023-06-19', '10:00:00', 500.00, 'Transferência', 'Venda de 15 cartelas de ovos', 15, 3, 2, 5, 1);
-insert into Venda values (null, '09.055.821/0001-08', '985.084.790-50', '2023-06-19', '14:30:00', 1008.00, 'Boleto', 'Venda de 36 cartelas de ovos brancos', 36, 5, 1, 4, 1);
-insert into Venda values (null, '79.077.089/0001-44', '878.071.600-80', '2023-06-19', '16:45:00', 728.00, 'Cartão de crédito', 'Venda de 26 cartelas de ovos vermelhos', 26, 4, 3, 2, 1);
+insert into Venda values (null, '66.259.745/0001-88', '719.172.960-02', '2023-06-19', '10:00:00', 500.00, 'Transferência', 'Venda de 15 cartelas de ovos', 15, 3, 2, 5, 1, 2);
+insert into Venda values (null, '09.055.821/0001-08', '985.084.790-50', '2023-06-19', '14:30:00', 1008.00, 'Boleto', 'Venda de 36 cartelas de ovos brancos', 36, 5, 1, 4, 1, 1);
+insert into Venda values (null, '79.077.089/0001-44', '878.071.600-80', '2023-06-19', '16:45:00', 728.00, 'Cartão de crédito', 'Venda de 26 cartelas de ovos vermelhos', 26, 4, 3, 2, 1, 3);
 
 create table Caixa(
 id_cai int primary key auto_increment,
