@@ -1,5 +1,3 @@
-drop schema sistema_agroave_bd;
-
 create database sistema_agroave_bd;
 use sistema_agroave_bd;
 
