@@ -8,6 +8,7 @@ namespace SistemaAGROAVE.Models
 {
     internal class Caixa
     {
+        public int Id { get; set; }
         public int NumeroCaixa { get; set; }
         public string Data { get; set; }
         public string Funcionario { get; set; }

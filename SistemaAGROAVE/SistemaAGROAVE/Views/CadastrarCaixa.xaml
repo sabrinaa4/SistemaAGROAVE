@@ -59,7 +59,7 @@
 
         <Button Content="Salvar" Click="BtnSalvar_Click" HorizontalAlignment="Left" Margin="390,420,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="32,420,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click" Grid.Column="1"/>
-        <Label Content="CADASTRAR FORNECEDOR" HorizontalAlignment="Left" Margin="302,4,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="18" Height="37" Foreground="White" Grid.ColumnSpan="2"/>
+        <Label Content="CADASTRAR CAIXA" HorizontalAlignment="Left" Margin="302,4,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="18" Height="37" Foreground="White" Grid.ColumnSpan="2"/>
         <TextBox x:Name="txtHoraFechamento" HorizontalAlignment="Left" Margin="58,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
         <TextBox x:Name="txtHoraAbertura" HorizontalAlignment="Left" Margin="58,358,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
     </Grid>
