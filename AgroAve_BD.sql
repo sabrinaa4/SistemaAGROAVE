@@ -263,15 +263,17 @@ numero_cai int,
 data_cai date,
 horario_abertura_cai time,
 horario_fechamento_cai time,
+valor_inicial_cai double,
+valor_final_cai double,
 id_fun_fk int,
 foreign key(id_fun_fk) references Funcionario (id_fun)
 );
 
 #Select * From Caixa;
 
-insert into Caixa values (null, 1, '2023-05-14', '07:34:00', '18:02:28', 2);
-insert into Caixa values (null, 2, '2023-05-15', '07:31:50', '18:00:59', 2);
-insert into Caixa values (null, 4, '2023-05-16', '07:30:00', '18:10:38', 2);
+insert into Caixa values (null, 1, '2023-05-14', '07:34:00', '18:02:28', 2500.00, 10789.77, 2);
+insert into Caixa values (null, 2, '2023-05-15', '07:31:50', '18:00:59', 2500.00, 23456.98, 2);
+insert into Caixa values (null, 4, '2023-05-16', '07:30:00', '18:10:38', 2500.00, 8680.90, 2);
 
 create table Recebimento(
 int_rec int primary key auto_increment,
