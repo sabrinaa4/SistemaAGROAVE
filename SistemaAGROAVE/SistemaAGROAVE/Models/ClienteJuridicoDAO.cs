@@ -34,7 +34,7 @@ namespace SistemaAGROAVE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO Cliente (nomeFantasia_cli, email_cli, cnpj_cli, telefone_cli, numero_casa_cli, rua_cli, bairro_cli, municipio_cli, estado_cli)" +
+                query.CommandText = "INSERT INTO ClienteJuridico (nomeFantasia_cli, email_cli, cnpj_cli, telefone_cli, numero_casa_cli, rua_cli, bairro_cli, municipio_cli, estado_cli)" +
                     "VALUES (@nomeFantasia,@email,@cnpj,@telefone, @numero_casa, @rua, @bairro, @municipio, @estado)";
                 query.Parameters.AddWithValue("@nomeFantasia", t.NomeFantasia);
                 query.Parameters.AddWithValue("@email", t.Email);
@@ -71,7 +71,7 @@ namespace SistemaAGROAVE.Models
                 List<ClienteJuridico> list = new List<ClienteJuridico>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM Cliente;";
+                query.CommandText = "SELECT * FROM ClienteJuridico;";
 
                 MySqlDataReader reader = query.ExecuteReader();
 

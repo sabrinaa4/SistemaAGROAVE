@@ -57,7 +57,7 @@ namespace SistemaAGROAVE
 
         private void btnCadastrarPro_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarProduto form = new CadastrarProduto();
+            RegistrarProducao form = new RegistrarProducao();
             form.ShowDialog();
         }
 

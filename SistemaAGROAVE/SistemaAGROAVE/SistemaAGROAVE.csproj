@@ -101,7 +101,6 @@
     <Compile Include="Models\Aves.cs" />
     <Compile Include="Models\AvesDAO.cs" />
     <Compile Include="Models\Caixa.cs" />
-    <Compile Include="Models\CaixaDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\ClienteJuridico.cs" />

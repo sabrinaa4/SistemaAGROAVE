@@ -33,10 +33,10 @@
 
             <Label Content="PRODUÇÃO REAL:" HorizontalAlignment="Left" Margin="562,177,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
             <Button x:Name="btnConsutarProd" Content="CONSULTAR PRODUÇÃO" HorizontalAlignment="Left" Margin="465,291,0,0" VerticalAlignment="Top" Width="217" TextBlock.FontFamily="Arial" Background="#FF1E4B88" Height="25" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="btnConsutarProd_Click"/>
-            <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="73,367,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF77BBE0" Background="#FF1E4B88" Height="25" Width="95" Click="Button_Click_1"/>
+            <Button Content="VOLTAR" HorizontalAlignment="Left" Margin="73,367,0,10" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF77BBE0" Background="#FF1E4B88" Width="95" Click="Button_Click_1"/>
             <Button x:Name="btnSalvar" Content="SALVAR" HorizontalAlignment="Left" Margin="618,366,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
             <Button Content="CANCELAR" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96" Click="Button_Click" RenderTransformOrigin="-1.264,0.154"/>
-            <TextBox x:Name="txtQtdAves" HorizontalAlignment="Left" Margin="48,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="22" TextBlock.FontFamily="Arial"/>
+            <TextBox x:Name="txtQuantidade" HorizontalAlignment="Left" Margin="48,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Height="22" TextBlock.FontFamily="Arial"/>
             <Label Content="PRODUÇÃO SEMANAL:" HorizontalAlignment="Left" Margin="562,116,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"/>
             <TextBox x:Name="txtProducaoSemanal" HorizontalAlignment="Left" Margin="562,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="22" TextBlock.FontFamily="Arial"/>
             <Image Margin="374,-395,376,-14" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
@@ -54,6 +54,8 @@
             <TextBox x:Name="txtProducaoReal" HorizontalAlignment="Left" Margin="562,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
             <Label Content="PRODUÇÃO ESPERADA:" HorizontalAlignment="Center" Margin="0,177,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
             <TextBox x:Name="txtProducaoEsperada" HorizontalAlignment="Left" Margin="331,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="20"/>
+            <Label Content="NOME:" HorizontalAlignment="Left" Margin="323,63,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+            <TextBox x:Name="txtNomee" HorizontalAlignment="Left" Margin="331,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="22" TextBlock.FontFamily="Arial"/>
         </Grid>
 
     </Grid>

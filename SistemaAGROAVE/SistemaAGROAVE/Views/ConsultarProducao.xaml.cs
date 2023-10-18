@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using SistemaAGROAVE.Models;
 
 namespace SistemaAGROAVE.Views
 {
@@ -22,6 +23,27 @@ namespace SistemaAGROAVE.Views
         public ConsultarProducao()
         {
             InitializeComponent();
+            Loaded += ConsultarProducao_Loaded;
+        }
+
+        private void ConsultarProducao_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadList();
+        }
+        private void LoadList()
+        {
+            try
+            {
+                var dao = new ProducaoDAO();
+
+                dataGridProducao.ItemsSource = dao.List();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Execeção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
