@@ -1,7 +1,7 @@
 create database sistema_agroave_bd;
 use sistema_agroave_bd;
 
-create table Cliente(
+create table Cliente_Fisico(
 id_cli int primary key auto_increment,
 nome_cli varchar(100),
 email_cli varchar(100),
@@ -21,6 +21,25 @@ insert into Cliente values (null, 'João Silva', 'joao.silva@email.com', '886.98
 insert into Cliente values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
 insert into Cliente values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
 insert into Cliente values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
+
+create table Cliente_Juridico(
+id_clij int primary key auto_increment,
+nome_fantasia_clij varchar(100),
+email_clij varchar(100),
+cnpj_clij varchar(14),
+telefone_clij varchar(50),
+numero_casa_clij int,
+rua_clij varchar(100),
+bairro_clij varchar(100),
+municipio_clij varchar(100),
+estado_clij varchar(100)
+);
+
+Select * from Cliente_Juridico;
+
+insert into Cliente_Juridico values (null, 'Varejo Baesso', 'varejo.baesso@gmail.com', '33.235.217/0001-30', '(77) 99336-8343', 123, 'Lauro de Freitas', 'Buraquinho', 'Lauro de Freitas', 'Bahia');
+insert into Cliente_Juridico values (null, 'Propaganda Miranda', 'propaganda.miranda@gmail.com', '15.283.118/0001-41', '(88) 2401-4424', 2356, 'Rua Valdetário Mota', 'Vicente Pinzon', 'Fortaleza', 'Ceará');
+insert into Cliente_Juridico values (null, 'Brechó Matta', 'brecho.matta@gmail.com', '00.761.255/0001-77', '(49) 2561-3865', 2504, 'Rua João Faustino dos Santos', 'São Pedro', 'Lages', 'Santa Catarina');
 
 create table Perfil_Usuario(
 id_perf int primary key auto_increment,
