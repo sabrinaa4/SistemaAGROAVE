@@ -106,6 +106,8 @@
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\ClienteJuridico.cs" />
     <Compile Include="Models\ClienteJuridicoDAO.cs" />
+    <Compile Include="Models\Estoque.cs" />
+    <Compile Include="Models\EstoqueDAO.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\FornecedorDAO.cs" />
     <Compile Include="Models\Producao.cs" />
@@ -141,6 +143,9 @@
     </Compile>
     <Compile Include="Views\ConsultarClienteJuridico.xaml.cs">
       <DependentUpon>ConsultarClienteJuridico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarEstoque.xaml.cs">
+      <DependentUpon>ConsultarEstoque.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarFornecedor.xaml.cs">
       <DependentUpon>ConsultarFornecedor.xaml</DependentUpon>
@@ -215,6 +220,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultarClienteJuridico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConsultarEstoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
