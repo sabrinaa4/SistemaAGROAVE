@@ -37,6 +37,7 @@
         <Button HorizontalAlignment="Left" Height="98" Margin="-20,274,0,0" VerticalAlignment="Top" Width="127" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14">
             <Image x:Name="btnVoltar2" Height="87" Source="/Captura_da_Web_20-6-2023_103014_www.canva.com-removebg-preview (1).png" Stretch="Fill" Width="101"/>
         </Button>
+        <Button Content="ESTOQUE" HorizontalAlignment="Left" Height="42" Margin="638,183,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.502,1.387" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
 
     </Grid>
 </Window>
