@@ -1,5 +1,3 @@
-drop schema sistema_agroave_bd;
-
 create database sistema_agroave_bd;
 use sistema_agroave_bd;
 
@@ -16,33 +14,13 @@ municipio_cli varchar(100),
 estado_cli varchar(100)
 );
 
+Select * From Cliente;
+
 insert into Cliente values (null, 'Erasmus Kidd', 'erasmuskidd4401@hotmail.com', '111.222.333-44', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
 insert into Cliente values (null, 'João Silva', 'joao.silva@email.com', '886.983.010-10', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
 insert into Cliente values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
 insert into Cliente values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
 insert into Cliente values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
-
-create table ClienteJuridico(
-id_cli int primary key auto_increment,
-nomeFantasia_cli varchar(100),
-email_cli varchar(100),
-cnpj_cli varchar(50),
-telefone_cli varchar(50),
-numero_casa_cli int,
-rua_cli varchar(100),
-bairro_cli varchar(100),
-municipio_cli varchar(100),
-estado_cli varchar(100)
-);
-
-
-Select * From Cliente;
-
-insert into ClienteJuridico values (null, 'empresa unaa', 'empresaunaa4401@hotmail.com', '27.776.263/0001-43', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
-insert into ClienteJuridico values (null, 'empresas e negócios', 'empresas.negocios@email.com', '52.226.055/0001-18', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
-insert into ClienteJuridico values (null, 'espaço prospeprar', 'espaço.prosperar@email.com', '76.538.288/0001-14', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
-insert into ClienteJuridico values (null, 'empresa dedicação', 'empresa.dedicaçao@email.com', '25.175.967/0001-35',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
-insert into ClienteJuridico values (null, 'empresa viver', 'empresaviver@email.com', '88.120.053/0001-97',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
 
 create table Perfil_Usuario(
 id_perf int primary key auto_increment,
@@ -99,7 +77,7 @@ insert into Aves values (null, 'Ave está se recuperando de uma infecção respi
 create table Produto (
 id_prod int primary key auto_increment,
 nome_prod  varchar(100),
-descricao_prod varchar(150),
+descricao_prod varchar(400),
 data_fabricacao_prod varchar(50),
 data_vencimento_prod varchar(50),
 codigo_barras_prod varchar(45),
@@ -135,6 +113,7 @@ insert into Fornecedor values (null, 'CB Gráfica', 'Carlos e Benício Gráfica 
 
 create table Estoque(
 id_est int primary key auto_increment,
+nome_est varchar(100),
 descricao_est varchar(150),
 data_fabricacao_est date,
 data_vencimento_est date,
@@ -146,9 +125,9 @@ foreign key(id_prod_fk) references Produto (id_prod)
 
 #Select * From Estoque;
 
-insert into Estoque values (null, 'Quirela pros galos.', '2022-01-01', '2023-12-31', '12345', 100, 3);
-insert into Estoque values (null, 'Remédio pros pintinhos', '2022-03-15', '2024-06-30', '67890', 50, 2);
-insert into Estoque values (null, 'Ftinhas para diferenciar os lotes', '2022-06-20', '2023-09-30', '23456', 200, 1);
+insert into Estoque values (null, 'Quirela', 'Quirela pros galos.', '2022-01-01', '2023-12-31', '12345', 100, 3);
+insert into Estoque values (null, 'Rémdeio', 'Remédio pros pintinhos', '2022-03-15', '2024-06-30', '67890', 50, 2);
+insert into Estoque values (null, 'Fitinha', 'Ftinhas para diferenciar os lotes', '2022-06-20', '2023-09-30', '23456', 200, 1);
 
 create table Compra (
 id_com int primary key auto_increment,
@@ -175,7 +154,7 @@ id_pro int primary key auto_increment,
 nome_pro varchar(100),
 quantidade_pro int,
 data_pro date,
-descricao_pro varchar(150),
+descricao_pro varchar(400),
 producao_diaria_pro varchar(50),
 producao_semanal_pro varchar(50),
 producao_mensal_pro varchar(50),
@@ -317,6 +296,14 @@ insert into Pagamento values (null, 'Máquina', 'Pago', '2023-06-19', '2023-07-1
 insert into Pagamento values (null, 'Aluguel', 'Atrasado', '2023-06-19', '2023-06-30', 'Pagamento aluguel', 'Boleto', 150.00, '14:30:00', 1, 1);
 insert into Pagamento values (null, 'Internt', 'Pago', '2023-06-19', '2023-06-25', 'Pagamento fornecedor', 'Boleto bancário', 200.00, '16:45:00', 2, 3);
 
+create table Produto_Compra (
+id_prod_com int primary key auto_increment,
+id_prod_fk int,
+foreign key(id_prod_fk) references Produto (id_prod),
+id_com_fk int,
+foreign key(id_com_fk) references Compra (id_com)
+);
+
 create table Produto_Venda (
 id_prod_ven int primary key auto_increment,
 id_prod_fk int,
@@ -333,6 +320,7 @@ insert into Produto_Venda values (null, 3, 3);
 
 create table Producao_Produto (
 id_pro_prod int primary key auto_increment,
+quantidade_pro_prod int,
 id_pro_fk int,
 foreign key(id_pro_fk) references Producao (id_pro),
 id_prod_fk int,
@@ -341,9 +329,9 @@ foreign key(id_prod_fk) references Produto (id_prod)
 
 #Select * From Producao_Produto;
 
-insert into Producao_Produto values (null, 1, 3);
-insert into Producao_Produto values (null, 3, 2);
-insert into Producao_Produto values (null, 2, 1);
+insert into Producao_Produto values (null, 11, 1, 3);
+insert into Producao_Produto values (null, 9, 3, 2);
+insert into Producao_Produto values (null, 3, 2, 1);
 
 create table Funcionario_Producao (
 if_fun_pro int primary key auto_increment,
@@ -361,6 +349,7 @@ insert into Funcionario_Producao values (null, 2, 1);
 
 create table Producao_Aves ( 
 id_pro_ave int primary key auto_increment,
+quantidade_pro_ave int,
 id_pro_fk int,
 foreign key(id_pro_fk) references Producao (id_pro),
 id_ave_fk int,
@@ -369,6 +358,6 @@ foreign key(id_ave_fk) references Aves (id_ave)
 
 #Select * From Producao_Aves;
 
-insert into Producao_Aves values (null, 2, 3);
-insert into Producao_Aves values (null, 1, 2);
-insert into Producao_Aves values (null, 3, 1);
+insert into Producao_Aves values (null, 20, 2, 3);
+insert into Producao_Aves values (null, 13, 1, 2);
+insert into Producao_Aves values (null, 5, 3, 1);
