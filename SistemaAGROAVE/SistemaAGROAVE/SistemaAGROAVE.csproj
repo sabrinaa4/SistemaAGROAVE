@@ -138,6 +138,9 @@
     <Compile Include="Views\ConsultarAves.xaml.cs">
       <DependentUpon>ConsultarAves.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConsultarCaixa.xaml.cs">
+      <DependentUpon>ConsultarCaixa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConsultarCliente.xaml.cs">
       <DependentUpon>ConsultarCliente.xaml</DependentUpon>
     </Compile>
@@ -212,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultarAves.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConsultarCaixa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

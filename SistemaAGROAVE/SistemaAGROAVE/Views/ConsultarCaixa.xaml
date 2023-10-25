@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="ConsultarCaixa" Height="450" Width="800">
     <Grid>
+        <Image Margin="375,-376,375,9" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
         
+        <Label Content="CONSULTAR CAIXA" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="183" FontSize="18" Height="37" Foreground="White"/>
+        
+        <DataGrid x:Name="dataGridCaixa" Margin="0,47,0,0" AutoGenerateColumns="False" CanUserAddRows ="False"
+            CanUserDeleteRows="False" IsReadOnly= "True" AlternatingRowBackground="#FFE5E5E5" AlternationCount= "2" Height="387" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Número" Binding= "{Binding Numero}" />
+                <DataGridTextColumn Header="Data" Binding="{Binding Data}" />
+                <DataGridTextColumn Header="Hora de Abertura" Binding="{Binding HoraAbertura}" />
+                <DataGridTextColumn Header="Hora de Fechamento" Binding="{Binding HoraFechamento}" />
+                <DataGridTextColumn Header="Valor Inicial" Binding="{Binding ValorInicial}" />
+                <DataGridTextColumn Header="Valor Final" Binding="{Binding ValorFechamento}" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
