@@ -1,7 +1,7 @@
 create database sistema_agroave_bd;
 use sistema_agroave_bd;
 
-create table Cliente_Fisico(
+create table Cliente(
 id_cli int primary key auto_increment,
 nome_cli varchar(100),
 email_cli varchar(100),
@@ -14,13 +14,13 @@ municipio_cli varchar(100),
 estado_cli varchar(100)
 );
 
-Select * From Cliente_Fisico;
+Select * From Cliente;
 
-insert into Cliente_Fisico values (null, 'Erasmus Kidd', 'erasmuskidd4401@hotmail.com', '111.222.333-44', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
-insert into Cliente_Fisico values (null, 'João Silva', 'joao.silva@email.com', '886.983.010-10', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
-insert into Cliente_Fisico values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
-insert into Cliente_Fisico values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
-insert into Cliente_Fisico values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
+insert into Cliente values (null, 'Erasmus Kidd', 'erasmuskidd4401@hotmail.com', '111.222.333-44', '(67) 931267-5282', 3709, 'Rua Paracatu', 'Parque Imperial', 'Anápolis', 'Maranhão');
+insert into Cliente values (null, 'João Silva', 'joao.silva@email.com', '886.983.010-10', '(11) 91234-5678', 1232, 'Rua das Flores', 'Centro', 'São Paulo', 'São Paulo');
+insert into Cliente values (null, 'Maria Santos', 'maria.santos@email.com', '896.059.500-49', '(21) 99876-5432', 5908, 'Avenida Atlântica', 'Copacabana', 'Rio de Janeiro', 'Rio de Janeiro');
+insert into Cliente values (null, 'Carlos Souza', 'carlos.souza@email.com', '279.215.320-20',  '(11) 95555-5555', 2504, 'Alameda Santos', 'Jardins', 'São Paulo', 'São Paulo');
+insert into Cliente values (null, 'Ana Ferreira', 'ana.ferreira@email.com', '049.420.270-04',  '(31) 92222-2222', 303, 'Rua dos Pinheiros', 'Boa Vista', 'Belo Horizonte', 'Minas Gerais');
 
 create table Cliente_Juridico(
 id_clij int primary key auto_increment,
@@ -244,7 +244,7 @@ parcela_ven int,
 id_ent_fk int,
 foreign key(id_ent_fk) references Entrega (id_ent),
 id_cli_fk int,
-foreign key(id_cli_fk) references Cliente_Fisico (id_cli),
+foreign key(id_cli_fk) references Cliente (id_cli),
 id_clij_fk int,
 foreign key(id_clij_fk) references Cliente_Juridico (id_clij),
 id_fun_fk int,
@@ -384,3 +384,448 @@ foreign key(id_ave_fk) references Aves (id_ave)
 insert into Producao_Aves values (null, 20, 2, 3);
 insert into Producao_Aves values (null, 13, 1, 2);
 insert into Producao_Aves values (null, 5, 3, 1);
+
+
+
+
+############ REGRA DE NEGÓCIO ############
+
+# TABELA CLIENTE
+Delimiter $$
+create procedure salvarCliente (nome varchar(100), email varchar(100), cpf varchar(14), telefone varchar(50), numero_casa int, rua varchar(100), 
+bairro varchar(100), municipio varchar(100), estado_cli varchar(100))
+begin
+declare ob_telefone varchar (100);
+
+set ob_telefone = (select telefone_cli from Cliente where (telefone_cli = telefone));
+
+if (ob_telefone = '') or (ob_telefone is null) then 
+    insert into Cliente values (null, nome, email, cpf, telefone, numero_casa, rua, bairro, municipio, estado_cli);
+   
+else 
+    select 'O TELEFONE informado já existe na base de dados!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarCliente ('Natasha Romanoff', 'romanoffnat@gmail.com', '123.456.215-75', '(69) 99635-2478', 1235, 'rua domingues', 'centro', 'Brooklyn', 'Nova Iorque');
+call salvarCliente ('Tony Stark', 'stark.tony@gmail.com', '578.659.214-35', '(69) 94851-2315', 654, 'rua cerejeiras', 'leste', 'Brooklyn', 'Nova Iorque');
+call salvarCliente ('Peter Parker', 'peterparker@gmail.com', '789.678.124-12', '(69) 96663-2255', 5478, 'rua do amigão', 'sul', 'Nova Iorque', 'Nova Iorque');
+
+select * from Cliente;
+
+
+# TABELA PERFIL DO USUÁRIO
+Delimiter $$
+create procedure salvarPerfilUsuario (nome varchar(100), cpf varchar(50), telefone varchar(50), rg varchar(50), email varchar(100), funcao varchar(100), setor varchar(100))
+begin
+declare ob_telefone varchar (100);
+
+set ob_telefone = (select telefone_perf from Perfil_Usuario where (telefone_perf = telefone));
+
+if (ob_telefone = '') or (ob_telefone is null) then 
+    insert into Perfil_Usuario values (null, nome, cpf, telefone, rg, email, funcao, setor);
+   
+else 
+    select 'O TELEFONE informado já existe na base de dados!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarPerfilUsuario ('Bruce Banner', '321.654.983-89', '(69) 99968-3265', '54.321.888-2', 'banner@gmail.com', 'Vendedor', 'Vendas');
+call salvarPerfilUsuario ('Steve Rogers', '123.546.547-21', '(69) 99654-5487', '54.548.987-3', 'rogers@gmail.com', 'Vendedor', 'Vendas');
+call salvarPerfilUsuario ('Wanda Maximof', '546.112.996-65', '(69) 99677-2165', '65.326.999-6', 'maximof@gmail.com', 'Caixa', 'Caixas');
+
+select * from Perfil_Usuario;
+
+
+
+# TABELA DESPESA
+Delimiter $$
+create procedure salvarDespesa (valor double, data_emissao date, data_vencimento date, parcela varchar(50), descricao varchar(100), status varchar(50), nome varchar(100), 
+forma_pag varchar(50))
+begin
+
+if (nome <> '') and (valor <> '') then
+    insert into Despesa values (null, valor, data_emissao, data_vencimento, parcela, descricao, status, nome, forma_pag);
+   
+else 
+    select 'Os campos NOME e VALOR são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarDespesa (100.00, '2023-09-20', '2023-10-20', 1, 'Aluguel do barracão', 'Pendente', 'Alugel', 'Cartão de Crédito');
+call salvarDespesa (75.50, '2023-09-25', '2023-10-25', 1, 'Compras no upermercado', 'Pendente', 'Supermercado', 'Dinheiro');
+call salvarDespesa (50.00, '2023-09-15', '2023-10-15', 2, 'Conta de Luz', 'Pago', 'Luz', 'Débito Automático');
+
+select * from Despesa;
+
+
+# TABELA AVES
+Delimiter $$
+create procedure salvarAves (observacoes varchar(100), cor_identificacao varchar(50), quant_obito int, raca varchar(50), data_entrada varchar(100), lote varchar(100), 
+numero_galpao int)
+begin 
+
+if (cor_identificacao <> '') and (raca <> '') then
+    insert into Aves values (null, observacoes, cor_identificacao, quant_obito, raca, data_entrada, lote, numero_galpao);
+   
+else 
+    select 'Os campos COR IDENTIFICAÇÃO e RAÇA são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarAves ('Ave saudável, sem observações adicionais', 'Branca', 0, 'Carijó', '2023-09-20', 'Lote 123', 1);
+call salvarAves ('Ave com penas um pouco desgastadas', 'Preta', 1, 'Brahma', '2023-09-18', 'Lote 456', 2);
+call salvarAves ('Ave com plumagem brilhante e saudável', 'Vermelha', 0, 'Brahma', '2023-09-22', 'Lote 789', 3);
+
+select * from Aves;
+
+
+# TABELA PRODUTO
+Delimiter $$
+create procedure salvarProduto (nome varchar(100), descricao varchar(400), data_fabricacao varchar(50), data_vencimento varchar(50), codigo_barras varchar(45), origem varchar(100),
+valor double)
+begin
+
+if (nome <> '') and (valor <> '') then
+    insert into Produto values (null, nome, descricao, data_fabricacao, data_vencimento, codigo_barras, origem, valor);
+   
+else 
+    select 'Os campos NOME e VALOR são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarProduto ('ovos vermelhos', 'ovos fresquinhos', '2023-09-18', '2024-09-18', '9876543210987', 'Importado', 3.49);
+call salvarProduto ('ovos vermelhos', 'ovos fresquinhos', '2023-09-22', '2024-09-22', '5678901234567', 'Nacional', 2.99);
+call salvarProduto ('ovos brancos', 'ovos fresquinhos', '2023-09-20', '2024-09-20', '1234567890123', 'Nacional', 5.99);
+
+select * from Produto;
+
+
+# TABELA FORNECEDOR
+Delimiter $$
+create procedure salvarFornecedor (nome_fantasia varchar(150), razao_social varchar(100), cnpj varchar(100), telefone varchar(45), email varchar(100), numero int, rua varchar(100),
+bairro varchar(100), municipio varchar(40), estado varchar(30))
+begin
+declare val_cnpj varchar(100);
+
+set val_cnpj = (select cnpj_for from Fornecedor where (cnpj_for = cnpj));
+
+if (val_cnpj = '') or (val_cnpj is null) then
+   insert into Fornecedor values (null, nome_fantasia, razao_social, cnpj, telefone, email, numero, rua, bairro, municipio, estado);
+   
+else
+	select 'O CNPJ informado já existe na base de dados!' as Alerta;
+end if; 
+
+end;
+$$ Delimiter ;
+call salvarFornecedor ('Suplementos', 'Sônia e Gustavo Suplementos Ltda.', '80.095.291/0001-88', '(69) 99456-7890', 'buffet.sg@example.com', '1823', '7 de setembro', 'Centro', 'Cacoal', 'Rondônia');
+call salvarFornecedor ('Bezerra', 'Bezerra Carvel Ltda.', '50.254.743/0001-66', '(69) 97789-0123', 'bezerra@example.com', '456', 'Avenida amarelo', 'Centro', 'Ariquemes', 'Rondônia');
+call salvarFornecedor ('Antunes', 'Antunes Ximenes Ltda.', '44.234.157/0001-57', '(69) 98456-7890', 'ximenesant@example.com', '913', 'Rua da saudade', 'Centro', 'Cacoal', 'Rondônia');
+
+select * from Fornecedor;
+
+
+# TABELA ESTOQUE
+Delimiter $$
+create procedure salvarEstoque (nome varchar(100), descricao varchar(150), data_fabricacao date, data_vencimento date, codigo varchar(100), quantidade int, prod_fk int)
+begin
+
+if (codigo <> '') and (descricao <> '') then
+    insert into Estoque values (null, nome, descricao, data_fabricacao, data_vencimento, codigo, quantidade, prod_fk);
+   
+else 
+    select 'Os campos CÓDIGO e DESCRIÇÃO são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarEstoque('Ovos vermelho', 'Ovos vermelhos das galinhas do galpão 1', '2023-09-18', '2024-09-18', '67890', 75, 2);
+call salvarEstoque('Ovos brancos', 'Ovos vermelhos das galinhas do galpão 3', '2023-09-22', '2024-09-22', '54321', 50, 1);
+call salvarEstoque('Garnisé', 'Galinha da raça Garnisé, branca', '2023-09-20', '2024-09-20', '12345', 100, 3);
+
+select * from Estoque;
+
+
+# TABELA COMPRA 
+Delimiter $$
+create procedure salvarCompra (valor double, tipo_pagamento varchar(100), descricao varchar(100), unidade int, data date, hora time, fornedor_fk int, despesa_fk int)
+begin
+
+if (valor <> '') and (descricao <> '') then
+    insert into Compra values (null, valor, tipo_pagamento, descricao, unidade, data, hora, fornedor_fk, despesa_fk);
+   
+else 
+    select 'Os campos VALOR e DESCRIÇÃO são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarCompra (100.00, 'Cartão de Crédito', 'Compra  remedio', 3, '2023-09-20', '14:30:00' , 3, 1);
+call salvarCompra (50.00, 'Dinheiro' , 'Compra material', 1, '2023-09-19', '12:45:00', 1, 2);
+call salvarCompra (200.00, 'Transferência Bancária', 'Compra material', 2, '2023-09-18', '10:15:00', 2, 3);
+
+select * from Compra;
+
+
+# TABELA PRODUÇÃO
+Delimiter $$
+create procedure salvarProducao (nome varchar(100), quantidade int, data date, descricao varchar(150), producao_diaria varchar(50), producao_semanal varchar(50), producao_mensal varchar(50),
+producao_esperada varchar(50), producao_real varchar(50))
+begin 
+
+if (nome <> '') and (quantidade <> '') then
+    insert into Producao values (null, nome, quantidade, data, descricao, producao_diaria, producao_semanal, producao_mensal, producao_esperada, producao_real);
+   
+else 
+    select 'Os campos NOME e QUANTIDADE são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarProducao ('Ovo Vermelho' , 1000, '2023-09-20', 'Produção de ovos', 1000, 7000 , 30000, 28000, 2800);
+call salvarProducao ('Ovo Branco', 800, '2023-09-20', 'Produção de ovos', 800, 5600, 24000 ,22000, 22000);
+call salvarProducao ('Ovo Vermelho',950, '2023-09-19', 'Produção de ovos', 950, 6650, 28500, 28000, 27800);
+
+select * from Producao;
+
+
+#TABELA FUNCIONÁRIO
+Delimiter $$
+create procedure salvarFuncionario (nome varchar(100), rg varchar(50), cpf varchar(50), telefone varchar(50), carteira_trabalho varchar(50), funcao varchar(50), setor varchar(50),
+numero varchar(50), rua varchar(50), bairro varchar(50), municipio varchar(50), estado varchar(50), salario double, perfil_fk int)
+begin
+declare ob_telefone varchar (50);
+
+set ob_telefone = (select telefone_fun from Funcionario where (telefone_fun = telefone));
+
+if (ob_telefone = '') or (ob_telefone is null) then 
+    insert into Funcionario values (null, nome, rg, cpf, telefone, carteira_trabalho, funcao, setor, numero, rua, bairro, municipio, estado, salario, perfil_fk);
+   
+else 
+    select 'O TELEFONE informado já existe na base de dados!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarFuncionario ('João da Silva', '1234567', '123.456.789-00', '(11) 1234-5678', 'CT1234567', 'Gerente', 'Administração', 123, 'Rua Principal', 'Centro', 'Porto Velho', 'São Paulo', 5000.00, 1);
+call salvarFuncionario ('Maria Oliveira', '9876543', '987.654.321-00', '(22) 9876-5432', 'CT9876543', 'Veterinário', 'Saúde', 45, 'Monte Castelo', 'Urupa', 'Jaru', 'Rio de Janeiro',   4000.00, 2);
+call salvarFuncionario ('Pedro Santos', '4567890', '456.789.123-00', '(33) 4567-8901', 'CT4567890', 'Agricultor', 'Produção', 671, 'Goiânia', 'Capelasso', 'Cacoal', 'MG', 3500.00, 3);
+
+select * from Funcionario;
+
+;
+
+# TABELA ENTREGA 
+Delimiter $$
+create procedure salvarEntrega (nome varchar(100), status varchar(200), endereco varchar(100), taxa double, valor_troco double, hora time, funcionario_fk int)
+begin
+
+if (nome <> '') and (endereco <> '') then
+    insert into Entrega values (null, nome, status, endereco, taxa, valor_troco, hora, funcionario_fk);
+   
+else 
+    select 'Os campos NOME e ENDEREÇO são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarEntrega ('Ovos Vermelhos', 'Entregue', 'Monte Catelo', 5.00, 20.00,'14:30:00', 3);
+call salvarEntrega ('Ovos Brancos', 'Pendente', 'São Paulo', 4.50, 0.00,'11:15:00', 3);
+call salvarEntrega ('Ovos Vemelhos', 'Entregue', 'Av. JK', 6.00, 10.00, '16:45:00', 3);
+                                                                               
+select * from Entrega;
+
+
+# TABELA VENDA 
+Delimiter $$
+create procedure salvarVenda (cnpj varchar(30), cpf varchar(14), data date, hora time, valor double, tipo_pagamento varchar(30), descricao varchar(250), unidades int, parcela int, 
+entregas_fk int, cliente_fk int, clientej_fk int, funcionario_fk int)
+begin
+
+if (cpf <> '') and (cnpj <> '') then
+    insert into Venda values (null, cnpj, cpf, data, hora, valor, tipo_pagamento, descricao, unidades, parcela, entregas_fk, cliente_fk, clientej_fk, funcionario_fk);
+   
+else 
+    select 'Os campos CPF e CNPJ são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarVenda ('12.345.678/0001-01', '456.789.123-00', '2023-09-20', '14:30:00', 2000.00, 'Cartão de Crédito', 'Venda de 50 cartelas de ovos brancos', 50, 1, 2, 5, 1, 2);
+call salvarVenda ('23.456.789/0001-03', '123.456.789-00', '2023-09-19', '11:15:00', 20.50, 'Dinheiro', 'Venda de 1 cartela de ovos brancos', 1, 1, 1, 4, 1, 3);
+call salvarVenda ('98.765.432/0001-02', '456.789.123-11', '2023-09-18', '16:45:00', 120.00, 'Transferência Bancária', 'Venda de 2 cartelas de ovos brancos', 2, 2, 3, 2, 1, 1);
+
+
+
+# TABELA CAIXA 
+Delimiter $$
+create procedure salvarCaixa (numero int, data date, horario_abertura time, horario_fechamento time, valor_inicial double, valor_final double,
+funcionario_fk int)
+begin 
+
+if (numero <> '') then
+    insert into Caixa values (null, numero, data, horario_abertura, horario_fechamento, valor_inicial, valor_final, funcionario_fk);
+   
+else 
+    select 'O campo NÚMERO é obrigatorio!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarCaixa (10, '2023-09-20', '08:00:00', '16:30:00', 3000.00, 23789.00, 2);
+call salvarCaixa (12, '2023-09-19', '07:45:00', '17:15:00', 3000.00, 13987.90, 1);
+call salvarCaixa (13, '2023-09-18', '08:30:00', '16:00:00', 3000.00, 15500.98, 3);
+
+select * from Caixa;
+
+
+# TABELA RECEBIMENTO
+Delimiter $$
+create procedure salvarRecebimento (nome varchar(100), valor double, parcela varchar(50), status varchar(100), hora time, data date, forma_recebimento varchar(50), 
+vencimento_parcela date, caixa_fk int, venda_fk int)
+begin
+
+if (nome <> '') and (valor <> '') then
+    insert into Recebimento values (null, nome, valor, parcela, status, hora, data, forma_recebimento, vencimento_parcela, caixa_fk, venda_fk);
+   
+else 
+    select 'Os campos NOME e VALOR são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarRecebimento ('Roger Santos', 150.00, 1, 'Pago', '14:30:00', '2023-09-20', 'Cartão de Crédito', '2023-10-05', 1, 1);
+call salvarRecebimento ('Simone Santana', 100.00, 1, 'Pago', '11:15:00', '2023-09-19', 'Dinheiro', '2023-10-04', 2, 2);
+call salvarRecebimento ('Luan Will', 300.00, 2 , 'Pendente', '16:45:00', '2023-09-18', 'Transferência Bancária', '2023-09-30', 3, 3);
+
+select * from Recebimento;
+
+
+# TABELA PAGAMENTO
+Delimiter $$
+create procedure salvarPagamento (nome varchar(100), status varchar(50), data_emissao date, data_vencimento date, descricao varchar(200), forma_pagamento varchar(50), valor double,
+hora time, caixa_fk int, despesa_fk int)
+begin
+
+if (nome <> '') and (valor <> '') then
+    insert into Pagamento values (null, nome, status, data_emissao, data_vencimento, descricao, forma_pagamento, valor, hora, caixa_fk, despesa_fk);
+   
+else 
+    select 'Os campos NOME e VALOR são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarPagamento ('Ração', 'Pendente', '2023-09-20', '2023-10-05', 'Compra de ração', 'Transferência Bancária', 1500.00, '14:30:00', 3, 2);
+call salvarPagamento ('Galinhas', 'Pago', '2023-09-19', '2023-01-05', 'Compra de galinhas', 'Dinheiro', 5000.00, '11:15:00', 1, 1);
+call salvarPagamento ('Equecipamentos', 'Pendente', '2023-09-18', '2023-09-30', 'Compra de equipamentos', 'Cheque', 2500.00, '16:45:00', 2, 3);
+
+select * from Pagamento;
+
+
+# TABELA PRODUTO_VENDA
+Delimiter $$
+create procedure salvarProdutoVenda (produto_fk int, venda_fk int)
+begin 
+
+if (produto_fk <> '') and (venda_fk <> '') then
+    insert into Produto_Venda values (null, produto_fk, venda_fk);
+   
+else 
+    select 'Os campos PRODUTO_FK e VENDA_FK são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarProdutoVenda (1, 2);
+call salvarProdutoVenda (3, 3);
+call salvarProdutoVenda (2, 1);
+
+select * from Produto_Venda;
+
+
+# TABELA PRODUÇÃO_PRODUTO
+Delimiter $$
+create procedure salvarProducaoProduto (quantidade int, producao_fk int, produto_fk int)
+begin
+
+if (quantidade <> '') then
+    insert into Producao_Produto values (null, quantidade, producao_fk, produto_fk);
+   
+else 
+    select 'O campo QUANTIDADE é obrigatorio!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarProducaoProduto (11, 3, 2);
+call salvarProducaoProduto (20, 1, 3);
+call salvarProducaoProduto (6, 2, 1);
+
+select * from Producao_Produto;
+
+
+# TABELA FUNCIONÁRIO_PRODUÇÃO
+Delimiter $$
+create procedure salvarFuncionarioProducao (funcionario_fk int, producao_fk int)
+begin
+
+if (funcionario_fk <> '') and (producao_fk <> '') then
+    insert into Funcionario_Producao values (null, funcionario_fk, producao_fk);
+   
+else 
+    select 'Os campos FUNCIONARIO_FK e PRODUCAO_FK são obrigatorios!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarFuncionarioProducao (3, 3);
+call salvarFuncionarioProducao (1, 2);
+call salvarFuncionarioProducao (2, 1);
+
+select * from Funcionario_Producao;
+
+
+#TABELA SALVAR_PRODUCAOAVES
+Delimiter $$
+create procedure salvarProducaoAves (quantidade int, producao_fk int, aves_fk int)
+begin
+
+if (quantidade <> '') then
+    insert into Producao_Aves values (null, quantidade, producao_fk, aves_fk);
+   
+else 
+    select 'O campo QUANTIDADE é obrigatorio!' as Alerta;
+end if;
+
+end;
+$$ Delimiter ;
+
+call salvarProducaoAves (6, 1, 2);
+call salvarProducaoAves (10, 3, 1);
+call salvarProducaoAves (2, 2, 3);
+
+select * from Producao_Aves;
