@@ -7,26 +7,21 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="CadastrarCaixa" Height="479" Width="855">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="211*"/>
             <ColumnDefinition Width="74*"/>
         </Grid.ColumnDefinitions>
+
         <Image Height="NaN" Margin="-4,0,0,419" Source="/Image1.png" Stretch="Fill" Width="NaN" Grid.ColumnSpan="2"/>
 
-        <Label Content="Ñ DO CAIXA:" HorizontalAlignment="Left" Margin="58,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="117"/>
-        <Label Content="DATA:" HorizontalAlignment="Left" Margin="58,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="117"/>
-        <TextBox x:Name="txtCaixa" HorizontalAlignment="Left" Margin="58,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22"/>
+        <Label Content="NÚMERO DO CAIXA:" HorizontalAlignment="Left" Margin="58,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="146"/>
+        <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="58,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22"/>
 
+        <Label Content="DATA:" HorizontalAlignment="Left" Margin="58,119,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" Height="28" FontFamily="Arial" FontWeight="Bold" Width="117"/>
         <TextBox x:Name="txtData" HorizontalAlignment="Left" Margin="58,147,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
 
-        <ComboBox x:Name="cbFuncionario" HorizontalAlignment="Left" Margin="470,87,0,0" VerticalAlignment="Top" Width="186" Height="22" Grid.ColumnSpan="2">
-            <ComboBoxItem Content="Acre"/>
-            <ComboBoxItem Content="Alagoas"/>
-            <ComboBoxItem Content="Amapá"/>
-            <System:String xml:space="preserve"> /&gt; </System:String>
-            <ComboBoxItem Content="Tocantins"/>
-        </ComboBox>
         <Label Content="FUNCIONÁRIO:" HorizontalAlignment="Left" Margin="469,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="129">
             <Label.RenderTransform>
                 <TransformGroup>
@@ -37,6 +32,13 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <ComboBox x:Name="cbFuncionario" HorizontalAlignment="Left" Margin="470,87,0,0" VerticalAlignment="Top" Width="186" Height="22" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="Acre"/>
+            <ComboBoxItem Content="Alagoas"/>
+            <ComboBoxItem Content="Amapá"/>
+            <System:String xml:space="preserve"> /&gt; </System:String>
+            <ComboBoxItem Content="Tocantins"/>
+        </ComboBox>
 
         <Button x:Name="btnConsultarCai" Content="CONSULTAR CAIXA" HorizontalAlignment="Left" Margin="428,184,0,0" VerticalAlignment="Top" Width="354" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="#FFF9F9F9" BorderBrush="#FF1E4B88" Click="btnConsultar_Click" Grid.ColumnSpan="2"/>
 
@@ -53,14 +55,23 @@
 
 
         <Label Content="HÓRARIO DE ABERTURA:" HorizontalAlignment="Left" Margin="58,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="164"/>
-        <Label Content="HÓRARIO DE FECHAMENTO:" HorizontalAlignment="Left" Margin="56,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="189"/>
+        <TextBox x:Name="txtHoraAbertura" HorizontalAlignment="Left" Margin="58,358,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
 
-        <Button Content="Voltar" HorizontalAlignment="Left" Margin="119,420,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click_1"/>
+        <Label Content="HÓRARIO DE FECHAMENTO:" HorizontalAlignment="Left" Margin="56,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="189"/>
+        <TextBox x:Name="txtHoraFechamento" HorizontalAlignment="Left" Margin="58,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+
+        <Label Content="CADASTRAR CAIXA" HorizontalAlignment="Left" Margin="332,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="192" FontSize="18" Height="37" Foreground="White"/>
+
+        <Label Content="VALOR INICIAL:" HorizontalAlignment="Left" Margin="470,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="164" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtValorInicial" HorizontalAlignment="Left" Margin="470,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24" Grid.ColumnSpan="2"/>
+
+        <Label Content="VALOR FINAL:" HorizontalAlignment="Left" Margin="468,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="189" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtValorFinal" HorizontalAlignment="Left" Margin="470,358,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24" Grid.ColumnSpan="2"/>
+
+        <Button Content="Voltar" HorizontalAlignment="Left" Margin="119,420,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="BtnVoltar_Click"/>
 
         <Button Content="Salvar" Click="BtnSalvar_Click" HorizontalAlignment="Left" Margin="390,420,0,0" VerticalAlignment="Top" Width="126" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="32,420,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="Button_Click" Grid.Column="1"/>
-        <Label Content="CADASTRAR CAIXA" HorizontalAlignment="Left" Margin="302,4,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="522" FontSize="18" Height="37" Foreground="White" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="txtHoraFechamento" HorizontalAlignment="Left" Margin="58,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
-        <TextBox x:Name="txtHoraAbertura" HorizontalAlignment="Left" Margin="58,358,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="32,420,0,0" VerticalAlignment="Top" Width="127" Height="33" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="White" BorderBrush="#FF1E4B88" Click="BtnCancelar_Click" Grid.Column="1"/>
     </Grid>
 </Window>

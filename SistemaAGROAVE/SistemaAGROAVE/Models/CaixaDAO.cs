@@ -32,22 +32,19 @@ namespace SistemaAGROAVE.Models
         {
             try
             {
-                //var query = conn.Query();
-                //query.CommandText = "INSERT INTO Caixa (numero_cai, data_cai, horario_abertura_cai, horario_fechamento_cai, valor_inicial_cai, valor_final_cai)";
+                var query = conn.Query();
+                query.CommandText = "INSERT INTO Caixa (numero_cai, data_cai, horario_abertura_cai, horario_fechamento_cai, valor_inicial_cai, valor_final_cai) VALUES (@numero, @data, @horario_abertura, @ horario_fechamento, @valor_inicial, @valor_final)";
 
-                //query.Parameters.AddWithValue("@observacoes", t.Observacoes);
-                //query.Parameters.AddWithValue("@cor_identificacao", t.CorIdentificacao);
-                //query.Parameters.AddWithValue("@quant_obito", t.QuantObito);
-                //query.Parameters.AddWithValue("@raca", t.Raca);
-                //query.Parameters.AddWithValue("@data_entrada", t.DataEntrada);
-                //query.Parameters.AddWithValue("@lote", t.Lote);
-                //query.Parameters.AddWithValue("@numero_galpao", t.NumeroGalpao);
-                //var result = query.ExecuteNonQuery();
+                query.Parameters.AddWithValue("@numero", t.Numero);
+                query.Parameters.AddWithValue("@data", t.Data);
+                query.Parameters.AddWithValue("@horario_abertura", t.HoraAbertura);
+                query.Parameters.AddWithValue("@horario_fechamento", t.HoraFechamento);
+                query.Parameters.AddWithValue("@valor_inicial", t.ValorInicial);
+                query.Parameters.AddWithValue("@valor_final", t.ValorFinal);
+                var result = query.ExecuteNonQuery();
 
-                //if (result == 0)
-                //    throw new Exception("O registo não foi inserido. Verifique e tente novamente");
-
-
+                if (result == 0)
+                    throw new Exception("O registo não foi inserido. Verifique e tente novamente");
             }
             catch (Exception e)
             {
@@ -75,8 +72,8 @@ namespace SistemaAGROAVE.Models
                     list.Add(new Caixa()
                     {
                         Id = reader.GetInt32("id_cai"),
-                        NumeroCaixa = reader.GetInt32("numero_cai"),
-                        Data = reader.GetString("cor_identificacao_ave"),
+                        Numero = reader.GetInt32("numero_cai"),
+                        Data = reader.GetString("data_cai"),
                         HoraAbertura = reader.GetString("horario_abertura_cai"),
                         HoraFechamento = reader.GetString("horario_fechamento_cai"),
                         ValorInicial = reader.GetDouble("valor_inicial_cai"),

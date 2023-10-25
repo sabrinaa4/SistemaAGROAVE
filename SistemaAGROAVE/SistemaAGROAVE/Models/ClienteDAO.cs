@@ -35,8 +35,7 @@ namespace SistemaAGROAVE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO Cliente (nome_cli, email_cli, cpf_cli, telefone_cli, numero_casa_cli, rua_cli, bairro_cli, municipio_cli, estado_cli)" +
-                    "VALUES (@nome,@email,@cpf,@telefone, @numero_casa, @rua, @bairro, @municipio, @estado)";
+                query.CommandText = "INSERT INTO Cliente (nome_cli, email_cli, cpf_cli, telefone_cli, numero_casa_cli, rua_cli, bairro_cli, municipio_cli, estado_cli) VALUES (@nome,@email,@cpf,@telefone, @numero_casa, @rua, @bairro, @municipio, @estado)";
                 query.Parameters.AddWithValue("@nome", t.Nome);
                 query.Parameters.AddWithValue("@email", t.Email);
                 query.Parameters.AddWithValue("@cpf", t.Cpf);
