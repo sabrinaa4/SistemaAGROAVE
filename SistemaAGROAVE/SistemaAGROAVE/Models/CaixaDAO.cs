@@ -37,10 +37,10 @@ namespace SistemaAGROAVE.Models
 
                 query.Parameters.AddWithValue("@numero", t.Numero);
                 query.Parameters.AddWithValue("@data", t.Data);
-                query.Parameters.AddWithValue("@horario_abertura", t.QuantObito);
-                query.Parameters.AddWithValue("@horario_fechamento", t.Raca);
-                query.Parameters.AddWithValue("@valor_inicial", t.DataEntrada);
-                query.Parameters.AddWithValue("@valor_final", t.Lote);
+                query.Parameters.AddWithValue("@horario_abertura", t.HoraAbertura);
+                query.Parameters.AddWithValue("@horario_fechamento", t.HoraFechamento);
+                query.Parameters.AddWithValue("@valor_inicial", t.ValorInicial);
+                query.Parameters.AddWithValue("@valor_final", t.ValorFinal);
                 var result = query.ExecuteNonQuery();
 
                 if (result == 0)
@@ -72,8 +72,8 @@ namespace SistemaAGROAVE.Models
                     list.Add(new Caixa()
                     {
                         Id = reader.GetInt32("id_cai"),
-                        NumeroCaixa = reader.GetInt32("numero_cai"),
-                        Data = reader.GetString("cor_identificacao_ave"),
+                        Numero = reader.GetInt32("numero_cai"),
+                        Data = reader.GetString("data_cai"),
                         HoraAbertura = reader.GetString("horario_abertura_cai"),
                         HoraFechamento = reader.GetString("horario_fechamento_cai"),
                         ValorInicial = reader.GetDouble("valor_inicial_cai"),
