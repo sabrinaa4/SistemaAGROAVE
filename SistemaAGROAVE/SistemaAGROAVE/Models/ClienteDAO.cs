@@ -50,7 +50,7 @@ namespace SistemaAGROAVE.Models
                 var result = query.ExecuteNonQuery();
 
                 if (result == 0)
-                    throw new Exception("O registo não foi inserido. Verifique e tente novamente");
+                    throw new Exception("O registo não foi inserido. Verifique e tente novamente!");
 
 
             }

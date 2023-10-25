@@ -34,7 +34,7 @@ namespace SistemaAGROAVE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO ClienteJuridico (nomeFantasia_cli, email_cli, cnpj_cli, telefone_cli, numero_casa_cli, rua_cli, bairro_cli, municipio_cli, estado_cli)" +
+                query.CommandText = "INSERT INTO Cliente_Juridico (nomeFantasia_clij, email_clij, cnpj_clij, telefone_clij, numero_casa_clij, rua_clij, bairro_clij, municipio_clij, estado_clij)" +
                     "VALUES (@nomeFantasia,@email,@cnpj,@telefone, @numero_casa, @rua, @bairro, @municipio, @estado)";
                 query.Parameters.AddWithValue("@nomeFantasia", t.NomeFantasia);
                 query.Parameters.AddWithValue("@email", t.Email);
@@ -71,7 +71,7 @@ namespace SistemaAGROAVE.Models
                 List<ClienteJuridico> list = new List<ClienteJuridico>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM ClienteJuridico;";
+                query.CommandText = "SELECT * FROM Cliente_Juridico;";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
@@ -79,16 +79,16 @@ namespace SistemaAGROAVE.Models
                 {
                     list.Add(new ClienteJuridico()
                     {
-                        Id = reader.GetInt32("id_cli"),
-                        NomeFantasia = reader.GetString("nomeFantasia_cli"),
-                        Email = reader.GetString("email_cli"),
-                        Cnpj = reader.GetString("cnpj_cli"),
-                        Telefone = reader.GetString("telefone_cli"),
-                        Numero = reader.GetInt32("numero_casa_cli"),
-                        Rua = reader.GetString("rua_cli"),
-                        Bairro = reader.GetString("bairro_cli"),
-                        Municipio = reader.GetString("municipio_cli"),
-                        Estado = reader.GetString("estado_cli")
+                        Id = reader.GetInt32("id_clij"),
+                        NomeFantasia = reader.GetString("nomeFantasia_clij"),
+                        Email = reader.GetString("email_clij"),
+                        Cnpj = reader.GetString("cnpj_clij"),
+                        Telefone = reader.GetString("telefone_clij"),
+                        Numero = reader.GetInt32("numero_casa_clij"),
+                        Rua = reader.GetString("rua_clij"),
+                        Bairro = reader.GetString("bairro_clij"),
+                        Municipio = reader.GetString("municipio_clij"),
+                        Estado = reader.GetString("estado_clij")
                     });
                 }
 
