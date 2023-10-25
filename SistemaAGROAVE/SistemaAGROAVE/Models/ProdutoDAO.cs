@@ -36,12 +36,12 @@ namespace SistemaAGROAVE.Models
                 query.CommandText = "INSERT INTO Produto (nome_prod, descricao_prod, data_fabricacao_prod, data_vencimento_prod, codigo_barras_prod, origem_prod , valor_prod)" +
                     " VALUES (@nome, @descricao, @data_fabricacao, @data_vencimento, @codigo_barras, @origem, @valor)";
                 query.Parameters.AddWithValue("@nome", t.Nome);
-                query.Parameters.AddWithValue(" @descricao", t.Descricao);
-                query.Parameters.AddWithValue(" @data_fabricacao", t.DataFabricacao);
-                query.Parameters.AddWithValue(" @data_vencimento", t.DataVencimento);
+                query.Parameters.AddWithValue("@descricao", t.Descricao);
+                query.Parameters.AddWithValue("@data_fabricacao", t.DataFabricacao);
+                query.Parameters.AddWithValue("@data_vencimento", t.DataVencimento);
                 query.Parameters.AddWithValue("@codigo_barras", t.Codigo);
-                query.Parameters.AddWithValue(" @origem", t.Origem);
-                query.Parameters.AddWithValue(" @valor", t.Valor);
+                query.Parameters.AddWithValue("@origem", t.Origem);
+                query.Parameters.AddWithValue("@valor", t.Valor);
                 
 
                 var result = query.ExecuteNonQuery();

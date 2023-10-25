@@ -43,7 +43,7 @@ namespace SistemaAGROAVE.Views
                 ProducaoDAO producaoDAO = new ProducaoDAO();
                 producaoDAO.Insert(producao);
 
-                MessageBox.Show("O cliente foi adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("A produção foi adicionado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
                 var result = MessageBox.Show("Deseja continuar?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.No)
                 {
