@@ -38,7 +38,7 @@
         
         <Button Content="VENDA" HorizontalAlignment="Left" Height="42" Margin="107,280,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
         
-        <Button Content="CAIXA" HorizontalAlignment="Left" Height="42" Margin="341,280,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
+        <Button Content="CAIXA" HorizontalAlignment="Left" Height="42" Margin="341,280,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarCai_Click"/>
         
         <Button Content="COMPRA" HorizontalAlignment="Left" Height="42" Margin="565,280,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
         

@@ -73,5 +73,11 @@ namespace SistemaAGROAVE
             //if (result == MessageBoxResult.Yes)
             //    this.Close();
         }
+
+        private void btnCadastrarCai_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarCaixa form = new CadastrarCaixa();
+            form.ShowDialog();
+        }
     }
 }

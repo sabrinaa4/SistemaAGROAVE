@@ -32,12 +32,9 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <ComboBox x:Name="cbFuncionario" HorizontalAlignment="Left" Margin="470,87,0,0" VerticalAlignment="Top" Width="186" Height="22" Grid.ColumnSpan="2">
-            <ComboBoxItem Content="Acre"/>
-            <ComboBoxItem Content="Alagoas"/>
-            <ComboBoxItem Content="Amapá"/>
+        <ComboBox x:Name="cbFuncionario" HorizontalAlignment="Left" Margin="470,87,0,0" VerticalAlignment="Top" Width="186" Height="22" Grid.ColumnSpan="2" SelectionChanged="cbFuncionario_SelectionChanged">
             <System:String xml:space="preserve"> /&gt; </System:String>
-            <ComboBoxItem Content="Tocantins"/>
+            <ComboBoxItem>Selecione o Funcionário</ComboBoxItem>
         </ComboBox>
 
         <Button x:Name="btnConsultarCai" Content="CONSULTAR CAIXA" HorizontalAlignment="Left" Margin="428,184,0,0" VerticalAlignment="Top" Width="354" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="#FFF9F9F9" BorderBrush="#FF1E4B88" Click="btnConsultar_Click" Grid.ColumnSpan="2"/>
