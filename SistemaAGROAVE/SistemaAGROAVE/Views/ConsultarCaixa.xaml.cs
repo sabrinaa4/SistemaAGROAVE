@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaAGROAVE.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,27 @@ namespace SistemaAGROAVE.Views
         public ConsultarCaixa()
         {
             InitializeComponent();
+            Loaded += ConsultarCaixa_Loaded; 
         }
+
+        private void ConsultarCaixa_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadList();
+        }
+
+        private void LoadList()
+        {
+            try
+            {
+                var dao = new CaixaDAO();
+
+                dataGridCaixa.ItemsSource = dao.List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Execeção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
     }
 }
