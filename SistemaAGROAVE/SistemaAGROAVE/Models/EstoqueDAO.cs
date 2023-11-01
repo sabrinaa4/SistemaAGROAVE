@@ -36,14 +36,14 @@ namespace SistemaAGROAVE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO Fornecedor (codigo_for, nome_produto_for, quantiadade_for, descricao_for, data_fabricaçao_for, data_vencimento_for)" +
-                    "VALUES (@codigo,@nome_produto,@fornecedor,@quantidade, @descricao, @data_fabricaçao, @data_vencimento)";
-                query.Parameters.AddWithValue("@codigo", t.Codigo);
+                query.CommandText = "INSERT INTO Estoque (nome_produto_est, codigo_est, descricao_est, quantidade_est, data_fabricaçao_est, data_validade_est)" +
+                    "VALUES (@nome_produto, @codigo, @descricao, @quantidade, @data_fabricaçao, @data_validade)";
                 query.Parameters.AddWithValue("@nome_produto", t.NomeProduto);
-                query.Parameters.AddWithValue("@quantidade", t.Quantidade);
+                query.Parameters.AddWithValue("@codigo", t.Codigo);
                 query.Parameters.AddWithValue("@descricao", t.Descricao);
+                query.Parameters.AddWithValue("@quantidade", t.Quantidade);
                 query.Parameters.AddWithValue("@data_fabricacao", t.DataFabricacao);
-                query.Parameters.AddWithValue("@data_vencimento", t.DataVencimento);
+                query.Parameters.AddWithValue("@data_vencimento", t.DataValidade);
 
 
 
@@ -73,7 +73,7 @@ namespace SistemaAGROAVE.Models
                 List<Estoque> list = new List<Estoque>();
 
                 var query = conn.Query();
-                query.CommandText = "SELECT * FROM Fornecedor;";
+                query.CommandText = "SELECT * FROM Estoque;";
 
                 MySqlDataReader reader = query.ExecuteReader();
 
@@ -81,15 +81,15 @@ namespace SistemaAGROAVE.Models
                 {
                     list.Add(new Estoque()
                     {
-                        Id = reader.GetInt32("id_for"),
-                        Codigo = reader.GetString("codigo_for"),
-                        NomeProduto = reader.GetString("nome_produro_for"),
-                        Quantidade = reader.GetString("quantidade_for"),
-                        Descricao = reader.GetString("Descricao_for"),
-                        DataFabricacao = reader.GetString("_for"),
-                        DataVencimento = reader.GetString("data_Vencimento_for"),
+                        Id = reader.GetInt32("id_est"),
+                        NomeProduto = reader.GetString("nome_produto_est"),
+                        Codigo = reader.GetString("codigo_est"),
+                        Descricao = reader.GetString("Descricao_est"),
+                        Quantidade = reader.GetString("quantidade_est"),
+                        DataFabricacao = reader.GetString("data_fabricacao_est"),
+                        DataValidade = reader.GetString("data_validade_est"),
 
-                    }); ;
+                    }); 
                 }
 
                 return list;
