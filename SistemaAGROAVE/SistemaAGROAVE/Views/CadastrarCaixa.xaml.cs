@@ -28,7 +28,8 @@ namespace SistemaAGROAVE.Views
 
         private void btnConsultar_Click(object sender, RoutedEventArgs e)
         {
-
+            ConsultarCaixa form = new ConsultarCaixa();
+            form.ShowDialog();
         }
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
@@ -38,11 +39,12 @@ namespace SistemaAGROAVE.Views
                 Caixa caixa = new Caixa();
                 caixa.Numero = Convert.ToInt16(txtNumero.Text);
                 caixa.Data = txtData.Text;
+                caixa.Funcionario = txtFuncionario.Text;
                 caixa.HoraAbertura = txtHoraAbertura.Text;
                 caixa.HoraFechamento = txtHoraFechamento.Text;
                 caixa.ValorInicial = Convert.ToDouble(txtValorInicial.Text);
                 caixa.ValorFinal = Convert.ToDouble(txtValorFinal.Text);
-                caixa.Funcionario = cbFuncionario.Text;
+                //caixa.Funcionario = cbFuncionario.Text;
 
                 CaixaDAO caixaDAO = new CaixaDAO();
                 caixaDAO.Insert(caixa);
@@ -59,11 +61,12 @@ namespace SistemaAGROAVE.Views
                 {
                     txtNumero.Text = "";
                     txtData.Text = "";
+                    txtFuncionario.Text = "";
                     txtHoraAbertura.Text = "";
                     txtHoraFechamento.Text = "";
                     txtValorInicial.Text = "";
                     txtValorFinal.Text = "";
-                    cbFuncionario.Text = "";
+                    //cbFuncionario.Text = "";
                 }
             }
 
@@ -81,11 +84,12 @@ namespace SistemaAGROAVE.Views
 
             txtNumero.Text = "";
             txtData.Text = "";
+            txtFuncionario.Text = "";
             txtHoraAbertura.Text = "";
             txtHoraFechamento.Text = "";
             txtValorInicial.Text = "";
             txtValorFinal.Text = "";
-            cbFuncionario.Text = "";
+            //cbFuncionario.Text = "";
         }
 
         private void BtnVoltar_Click(object sender, RoutedEventArgs e)
@@ -96,16 +100,16 @@ namespace SistemaAGROAVE.Views
                 this.Close();
         }
 
-        private void cbFuncionario_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var comboBox = (ComboBox)sender;
-            var selectedItem = (ComboBoxItem)comboBox.SelectedItem;
+        //private void cbFuncionario_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    var comboBox = (ComboBox)sender;
+        //    var selectedItem = (ComboBoxItem)comboBox.SelectedItem;
 
-            if (cbFuncionario.SelectedItem.ToString() == "Consulta de Funcionário")
-            {
-                CadastrarFuncionario employeeQueryPage = new CadastrarFuncionario();
-                employeeQueryPage.Show();
-            }
-        }
+        //    if (cbFuncionario.SelectedItem.ToString() == "Consulta de Funcionário")
+        //    {
+        //        CadastrarFuncionario employeeQueryPage = new CadastrarFuncionario();
+        //        employeeQueryPage.Show();
+        //    }
+        //}
     }
 }

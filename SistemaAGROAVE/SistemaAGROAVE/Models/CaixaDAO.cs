@@ -33,7 +33,7 @@ namespace SistemaAGROAVE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO Caixa (numero_cai, data_cai, horario_abertura_cai, horario_fechamento_cai, valor_inicial_cai, valor_final_cai) VALUES (@numero, @data, @horario_abertura, @ horario_fechamento, @valor_inicial, @valor_final)";
+                query.CommandText = "INSERT INTO Caixa (numero_cai, data_cai, horario_abertura_cai, horario_fechamento_cai, valor_inicial_cai, valor_final_cai) VALUES (@numero, @data, @horario_abertura, @horario_fechamento, @valor_inicial, @valor_final)";
 
                 query.Parameters.AddWithValue("@numero", t.Numero);
                 query.Parameters.AddWithValue("@data", t.Data);
@@ -91,13 +91,11 @@ namespace SistemaAGROAVE.Models
             {
                 conn.Close();
             }
-
         }
 
         public void Update(Caixa t)
         {
             throw new NotImplementedException();
         }
-      
     }
 }

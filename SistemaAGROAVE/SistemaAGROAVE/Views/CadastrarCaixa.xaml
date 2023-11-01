@@ -32,10 +32,11 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <ComboBox x:Name="cbFuncionario" HorizontalAlignment="Left" Margin="470,87,0,0" VerticalAlignment="Top" Width="186" Height="22" Grid.ColumnSpan="2" SelectionChanged="cbFuncionario_SelectionChanged">
+        <TextBox x:Name="txtFuncionario" HorizontalAlignment="Left" Margin="470,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="22" Grid.ColumnSpan="2"/>
+        <!--<ComboBox x:Name="cbFuncionario" HorizontalAlignment="Left" Margin="470,87,0,0" VerticalAlignment="Top" Width="186" Height="22" Grid.ColumnSpan="2" SelectionChanged="cbFuncionario_SelectionChanged">
             <System:String xml:space="preserve"> /&gt; </System:String>
             <ComboBoxItem>Selecione o Funcionário</ComboBoxItem>
-        </ComboBox>
+        </ComboBox>-->
 
         <Button x:Name="btnConsultarCai" Content="CONSULTAR CAIXA" HorizontalAlignment="Left" Margin="428,184,0,0" VerticalAlignment="Top" Width="354" Height="32" Background="#FF1E4B88" FontFamily="Arial" FontWeight="Bold" Foreground="#FFF9F9F9" BorderBrush="#FF1E4B88" Click="btnConsultar_Click" Grid.ColumnSpan="2"/>
 
@@ -52,10 +53,10 @@
 
 
         <Label Content="HÓRARIO DE ABERTURA:" HorizontalAlignment="Left" Margin="58,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="164"/>
-        <TextBox x:Name="txtHoraAbertura" HorizontalAlignment="Left" Margin="58,358,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+        <TextBox x:Name="txtHoraAbertura" HorizontalAlignment="Left" Margin="58,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
 
         <Label Content="HÓRARIO DE FECHAMENTO:" HorizontalAlignment="Left" Margin="56,330,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="189"/>
-        <TextBox x:Name="txtHoraFechamento" HorizontalAlignment="Left" Margin="58,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
+        <TextBox x:Name="txtHoraFechamento" HorizontalAlignment="Left" Margin="58,358,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="292" Height="24"/>
 
         <Label Content="CADASTRAR CAIXA" HorizontalAlignment="Left" Margin="332,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="192" FontSize="18" Height="37" Foreground="White"/>
 
