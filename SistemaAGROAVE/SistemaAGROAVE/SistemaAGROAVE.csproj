@@ -110,6 +110,8 @@
     <Compile Include="Models\EstoqueDAO.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\FornecedorDAO.cs" />
+    <Compile Include="Models\PerfilFuncionario.cs" />
+    <Compile Include="Models\PerfilFuncionarioDAO.cs" />
     <Compile Include="Models\Producao.cs" />
     <Compile Include="Models\ProducaoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
@@ -161,6 +163,9 @@
     </Compile>
     <Compile Include="Views\ConsultarProduto.xaml.cs">
       <DependentUpon>ConsultarProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlarAcessoPerfilFuncionario.xaml.cs">
+      <DependentUpon>ControlarAcessoPerfilFuncionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarAves.xaml.cs">
       <DependentUpon>RegistrarAves.xaml</DependentUpon>
@@ -247,6 +252,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultarProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ControlarAcessoPerfilFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
