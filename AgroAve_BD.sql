@@ -41,7 +41,7 @@ insert into Cliente_Juridico values (null, 'Varejo Baesso', 'varejo.baesso@gmail
 insert into Cliente_Juridico values (null, 'Propaganda Miranda', 'propaganda.miranda@gmail.com', '15.283.118/0001-4', '(88) 2401-4424', 2356, 'Rua Valdetário Mota', 'Vicente Pinzon', 'Fortaleza', 'Ceará');
 insert into Cliente_Juridico values (null, 'Brechó Matta', 'brecho.matta@gmail.com', '00.761.255/0001-7', '(49) 2561-3865', 2504, 'Rua João Faustino dos Santos', 'São Pedro', 'Lages', 'Santa Catarina');
 
-create table Perfil_Usuario(
+create table Perfil_Funcionario(
 id_perf int primary key auto_increment,
 nome_perf varchar(100),
 cpf_perf varchar(50),
@@ -52,11 +52,11 @@ funcao_perf varchar(100),
 setor_perf varchar(100)
 );
 
-#Select * From Perfil_Usuario;
+#Select * From Perfil_Funcionario;
 
-insert into Perfil_usuario values (null, 'João da Silva', '123.456.789-00', '(11) 91111-1111', '12.345.678-9', 'joao@email.com', 'Vendedor', 'Vendas');
-insert into Perfil_usuario values (null, 'Pedro Alves', '321.654.987-00', '(55) 95555-5555', '32.165.498-7', 'pedro@email.com', 'Caixista', 'Caixa');
-insert into Perfil_usuario values (null, 'Ana Souza', '654.321.987-00', '(44) 94444-4444', '54.321.987-6', 'ana@email.com', 'Entregador', 'Entregas');
+insert into Perfil_Funcionario values (null, 'João da Silva', '123.456.789-00', '(11) 91111-1111', '12.345.678-9', 'joao@email.com', 'Vendedor', 'Vendas');
+insert into Perfil_Funcionario values (null, 'Pedro Alves', '321.654.987-00', '(55) 95555-5555', '32.165.498-7', 'pedro@email.com', 'Caixista', 'Caixa');
+insert into Perfil_Funcionario values (null, 'Ana Souza', '654.321.987-00', '(44) 94444-4444', '54.321.987-6', 'ana@email.com', 'Entregador', 'Entregas');
 
 create table Despesa(
 id_des int primary key auto_increment,
@@ -124,7 +124,7 @@ municipio_for varchar(40),
 estado_for varchar(30)
 );
 
-Select * From Fornecedor;
+#Select * From Fornecedor;
 
 insert into Fornecedor values (null, 'Rações CIA', '5555', '73.680.269/0001-30',  '(83) 2592-5389', 'racoes@gmail.com', 987, 'José Pereira da Cunha', 'Platô do Piquiá', 'Boca do Acre', 'Amazonas');
 insert into Fornecedor values (null, 'Sarah & Alessandra', 'Sarah e Alessandra Alimentos Ltda',  '539.787.725-67', '(16) 3775-5740', 'sarahealessandra@gmail.com', 21, 'Avenida Vinte', 'Portal Terra da Saudade', 'Matão', 'São Paulo');
@@ -132,12 +132,12 @@ insert into Fornecedor values (null, 'CB Gráfica', 'Carlos e Benício Gráfica 
 
 create table Estoque(
 id_est int primary key auto_increment,
-nome_est varchar(100),
+nome_produto_est varchar(100),
+codigo_est varchar(100),
 descricao_est varchar(150),
+quantidade_est int,
 data_fabricacao_est date,
 data_vencimento_est date,
-codigo_est varchar(100),
-quantidade_est int,
 id_prod_fk int,
 foreign key(id_prod_fk) references Produto (id_prod)
 );
