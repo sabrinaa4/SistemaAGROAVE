@@ -14,7 +14,7 @@ namespace SistemaAGROAVE.Models
         public string Quantidade { get; set; }
         public string Descricao { get; set; }
         public string DataFabricacao { get; set; }
-        public string DataVencimento { get; set; }
+        public string DataValidade { get; set; }
 
 
     }

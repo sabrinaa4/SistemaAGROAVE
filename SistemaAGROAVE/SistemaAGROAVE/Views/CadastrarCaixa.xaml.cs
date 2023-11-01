@@ -95,5 +95,17 @@ namespace SistemaAGROAVE.Views
             if (result == MessageBoxResult.Yes)
                 this.Close();
         }
+
+        private void cbFuncionario_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var comboBox = (ComboBox)sender;
+            var selectedItem = (ComboBoxItem)comboBox.SelectedItem;
+
+            if (cbFuncionario.SelectedItem.ToString() == "Consulta de Funcionário")
+            {
+                CadastrarFuncionario employeeQueryPage = new CadastrarFuncionario();
+                employeeQueryPage.Show();
+            }
+        }
     }
 }
