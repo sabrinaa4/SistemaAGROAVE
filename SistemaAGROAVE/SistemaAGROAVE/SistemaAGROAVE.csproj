@@ -162,6 +162,9 @@
     <Compile Include="Views\ConsultarProduto.xaml.cs">
       <DependentUpon>ConsultarProduto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ControlarEstoque.xaml.cs">
+      <DependentUpon>ControlarEstoque.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegistrarAves.xaml.cs">
       <DependentUpon>RegistrarAves.xaml</DependentUpon>
     </Compile>
@@ -247,6 +250,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultarProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ControlarEstoque.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
