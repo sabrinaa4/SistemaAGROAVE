@@ -166,6 +166,8 @@
     </Compile>
     <Compile Include="Views\ControlarAcessoPerfilFuncionario.xaml.cs">
       <DependentUpon>ControlarAcessoPerfilFuncionario.xaml</DependentUpon>
+    <Compile Include="Views\ControlarEstoque.xaml.cs">
+      <DependentUpon>ControlarEstoque.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarAves.xaml.cs">
       <DependentUpon>RegistrarAves.xaml</DependentUpon>
@@ -255,7 +257,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ControlarAcessoPerfilFuncionario.xaml">
+    <Page Include="Views\ControlarAcessoPerfilFuncionario.xaml"></Page>
+    <Page Include="Views\ControlarEstoque.xaml"></Page>
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
