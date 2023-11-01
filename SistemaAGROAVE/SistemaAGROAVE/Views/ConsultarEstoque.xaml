@@ -27,7 +27,7 @@
                 <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}" />
                 <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
                 <DataGridTextColumn Header="Data de Fabricação" Binding="{Binding DataFabricacao}" />
-                <DataGridTextColumn Header="Data de Vencimento" Binding="{Binding DataVencimento}" />
+                <DataGridTextColumn Header="Data de Validade" Binding="{Binding DataValidade}" />
 
             </DataGrid.Columns>
         </DataGrid>
