@@ -79,5 +79,11 @@ namespace SistemaAGROAVE
             CadastrarCaixa form = new CadastrarCaixa();
             form.ShowDialog();
         }
+
+        private void btnCadastrarCom_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarCompra form = new CadastrarCompra();
+            form.ShowDialog();
+        }
     }
 }
