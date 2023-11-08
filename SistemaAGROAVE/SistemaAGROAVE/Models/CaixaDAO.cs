@@ -71,7 +71,7 @@ namespace SistemaAGROAVE.Models
                 {
                     list.Add(new Caixa()
                     {
-                        Id = reader.GetInt32("id_cai"),
+                        Id = reader.GetInt16("id_cai"),
                         Numero = reader.GetInt32("numero_cai"),
                         Data = reader.GetString("data_cai"),
                         HoraAbertura = reader.GetString("horario_abertura_cai"),

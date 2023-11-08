@@ -128,6 +128,9 @@
     <Compile Include="Views\CadastrarClienteJuridico.xaml.cs">
       <DependentUpon>CadastrarClienteJuridico.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastrarCompra.xaml.cs">
+      <DependentUpon>CadastrarCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastrarFornecedor.xaml.cs">
       <DependentUpon>CadastrarFornecedor.xaml</DependentUpon>
     </Compile>
@@ -148,6 +151,9 @@
     </Compile>
     <Compile Include="Views\ConsultarClienteJuridico.xaml.cs">
       <DependentUpon>ConsultarClienteJuridico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarCompra.xaml.cs">
+      <DependentUpon>ConsultarCompra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarEstoque.xaml.cs">
       <DependentUpon>ConsultarEstoque.xaml</DependentUpon>
@@ -204,6 +210,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastrarCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CadastrarFornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -229,6 +239,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultarClienteJuridico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConsultarCompra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
