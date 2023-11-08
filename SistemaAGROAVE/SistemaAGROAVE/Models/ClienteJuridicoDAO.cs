@@ -34,9 +34,9 @@ namespace SistemaAGROAVE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO Cliente_Juridico (nome_fantasia_clij, email_clij, cnpj_clij, telefone_clij, numero_casa_clij, rua_clij, bairro_clij, municipio_clij, estado_clij)" +
-                    "VALUES (@nome_fantasia,@email,@cnpj,@telefone, @numero_casa, @rua, @bairro, @municipio, @estado)";
-                query.Parameters.AddWithValue("@nome_fantasia", t.NomeFantasia);
+                query.CommandText = "INSERT INTO Cliente_Juridico (nomeFantasia_clij, email_clij, cnpj_clij, telefone_clij, numero_casa_clij, rua_clij, bairro_clij, municipio_clij, estado_clij)" +
+                    "VALUES (@nomeFantasia,@email,@cnpj,@telefone, @numero_casa, @rua, @bairro, @municipio, @estado)";
+                query.Parameters.AddWithValue("@nomeFantasia", t.NomeFantasia);
                 query.Parameters.AddWithValue("@email", t.Email);
                 query.Parameters.AddWithValue("@cnpj", t.Cnpj);
                 query.Parameters.AddWithValue("@numero_casa", t.Numero);
@@ -80,7 +80,7 @@ namespace SistemaAGROAVE.Models
                     list.Add(new ClienteJuridico()
                     {
                         Id = reader.GetInt32("id_clij"),
-                        NomeFantasia = reader.GetString("nome_fantasia_clij"),
+                        NomeFantasia = reader.GetString("nomeFantasia_clij"),
                         Email = reader.GetString("email_clij"),
                         Cnpj = reader.GetString("cnpj_clij"),
                         Telefone = reader.GetString("telefone_clij"),
