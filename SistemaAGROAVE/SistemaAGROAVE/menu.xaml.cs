@@ -28,8 +28,8 @@ namespace SistemaAGROAVE
 
         private void btnCadastrarFun_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarFuncionario form = new CadastrarFuncionario();
-            form.ShowDialog();  
+            FuncionarioEscolher form = new FuncionarioEscolher();
+            form.ShowDialog();
         }
 
         private void btnCadastrarProd_Click(object sender, RoutedEventArgs e)

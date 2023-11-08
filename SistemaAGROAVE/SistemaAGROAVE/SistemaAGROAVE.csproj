@@ -112,6 +112,8 @@
     <Compile Include="Models\EstoqueDAO.cs" />
     <Compile Include="Models\Fornecedor.cs" />
     <Compile Include="Models\FornecedorDAO.cs" />
+    <Compile Include="Models\PerfilFuncionario.cs" />
+    <Compile Include="Models\PerfilFuncionarioDAO.cs" />
     <Compile Include="Models\Producao.cs" />
     <Compile Include="Models\ProducaoDAO.cs" />
     <Compile Include="Models\Produto.cs" />
@@ -136,6 +138,9 @@
     </Compile>
     <Compile Include="Views\CadastrarProduto.xaml.cs">
       <DependentUpon>CadastrarProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarAcessoPerfilFuncionario.xaml.cs">
+      <DependentUpon>ConsultarAcessoPerfilFuncionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarAves.xaml.cs">
       <DependentUpon>ConsultarAves.xaml</DependentUpon>
@@ -163,6 +168,12 @@
     </Compile>
     <Compile Include="Views\ConsultarProduto.xaml.cs">
       <DependentUpon>ConsultarProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlarPerfilFuncionario.xaml.cs">
+      <DependentUpon>ControlarPerfilFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FuncionarioEscolher.xaml.cs">
+      <DependentUpon>FuncionarioEscolher.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarAves.xaml.cs">
       <DependentUpon>RegistrarAves.xaml</DependentUpon>
@@ -216,6 +227,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ConsultarAcessoPerfilFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ConsultarAves.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -249,6 +264,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultarProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ControlarPerfilFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FuncionarioEscolher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -311,6 +334,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="person-icon-png-2.png.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="usuario-de-perfil.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

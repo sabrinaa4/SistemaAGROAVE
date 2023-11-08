@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaAGROAVE.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,25 @@ namespace SistemaAGROAVE.Views
         public ConsultarAcessoPerfilFuncionario()
         {
             InitializeComponent();
+            Loaded += ConsultarAcessoPerfilFuncionario_Loaded;
+        }
+
+        private void ConsultarAcessoPerfilFuncionario_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadList();
+        }
+        private void LoadList()
+        {
+            try
+            {
+                var dao = new PerfilFuncionarioDAO();
+
+                dataGridPerfilFuncionario.ItemsSource = dao.List();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Execeção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
