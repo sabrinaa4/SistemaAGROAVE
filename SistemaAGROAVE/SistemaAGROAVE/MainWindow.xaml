@@ -6,41 +6,32 @@
         xmlns:local="clr-namespace:SistemaAGROAVE"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="AGROAVE" Background="#FF294B79">
-        <Label x:Name="label" Content="AGR" HorizontalAlignment="Left" Height="222" Margin="95,144,0,0" VerticalAlignment="Top" Width="260" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="110" FontFamily="Segoe UI Black" FontWeight="Bold" BorderBrush="Black"/>
+    <Grid x:Name="AGROAVE">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF294B79" Offset="0.297"/>
+                <GradientStop Color="#FF001F54" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Image Height="NaN" Margin="0,0,800,434"  Stretch="Fill" Width="NaN"/>
-        <Image Height="NaN" Margin="264,151,264,140"  Stretch="Fill" Width="NaN" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.997"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-1.341"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Label Content="AVE" HorizontalAlignment="Left" Height="222" Margin="440,144,0,0" VerticalAlignment="Top" Width="260" AutomationProperties.IsColumnHeader="True" Foreground="White" FontSize="110" FontFamily="Segoe UI Black" FontWeight="Bold"/>
-        <Button Content="INICIAR" HorizontalAlignment="Left" Height="42" Margin="345,332,0,0" VerticalAlignment="Top" Width="90" Background="#FFFFFCF0" FontFamily="Arial Black" Click="Button_Click"/>
-        <Image Height="NaN" Margin="264,151,264,140"  Stretch="Fill" Width="NaN" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.997"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="-1.341"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image Height="NaN" Margin="338,170,357,138" Source="/Captura_da_Web_20-6-2023_92730_www.canva.com-removebg-preview.png" Stretch="Fill" Width="NaN" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="347" VerticalAlignment="Top" Width="329" Background="White" Margin="409,49,0,0" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-0.07"/>
+                    <RotateTransform Angle="0.126"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+            </Border.RenderTransform>
+        </Border>
+        <Label Content="BEM-VINDO!" HorizontalAlignment="Left" Height="101" Margin="55,201,0,0" VerticalAlignment="Top" Width="319" FontWeight="Bold" FontSize="60" Background="{x:Null}" Foreground="#FF001F54" BorderBrush="#FF001F54" OpacityMask="White" FontFamily="Impact"/>
+        <Label Content="BEM-VINDO!" HorizontalAlignment="Left" Height="101" Margin="64,201,0,0" VerticalAlignment="Top" Width="319" FontWeight="Bold" FontSize="60" Background="{x:Null}" Foreground="White" BorderBrush="White" OpacityMask="White" FontFamily="Impact"/>
+        <Label Content="FAÇA SEU LOGIN" HorizontalAlignment="Left" Height="54" Margin="476,70,0,0" VerticalAlignment="Top" Width="208" FontSize="30" Background="{x:Null}" Foreground="#FF0E0D0D" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontWeight="Bold"/>
+        <Label Content="LOGIN:" HorizontalAlignment="Left" Height="36" Margin="420,160,0,0" VerticalAlignment="Top" Width="82" FontWeight="Bold" Background="{x:Null}" Foreground="Black" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontSize="24"/>
+        <Label Content="SENHA:" HorizontalAlignment="Left" Height="36" Margin="420,250,0,0" VerticalAlignment="Top" Width="82" FontWeight="Bold" Background="{x:Null}" Foreground="Black" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontSize="24"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="420,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="22" TextBlock.FontFamily="Arial" SelectionBrush="#FFFDFDFD" BorderBrush="White" Background="#FFC8C8C8" />
+        <TextBox x:Name="txtNome_Copy" HorizontalAlignment="Left" Margin="420,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="22" TextBlock.FontFamily="Arial" SelectionBrush="#FFFDFDFD" BorderBrush="White" Background="#FFC8C8C8" />
+        <Image Height="NaN" Margin="94,55,465,196" Source="/galinha_pintadinha-removebg-preview.png" Stretch="Fill" Width="NaN"/>
 
     </Grid>
 </Window>

@@ -1,12 +1,49 @@
-﻿<Window x:Class="SistemaAGROAVE.Views.RegistrarVenda"
+﻿<Window x:Class="SistemaAGROAVE.Views.RegistrarVemda"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SistemaAGROAVE.Views"
         mc:Ignorable="d"
-        Title="RegistrarVenda" Height="450" Width="800">
-    <Grid>
-        
+        Title="RegistrarVemda" Height="450" Width="800">
+    <Grid Margin="1,0,-1,0">
+        <Image Margin="375,-376,375,9" Source="/Image1.png" Stretch="Fill" Width="50" RenderTransformOrigin="0.5,0.5" Height="NaN">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="REGISTRAR VENDA" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.579,-4.698" FontFamily="Arial" FontWeight="Bold" Width="184" FontSize="18" Height="37" Foreground="White"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="44,76,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold"/>
+        <Label Content="VALOR:" HorizontalAlignment="Left" Margin="295,76,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label Content="TIPO DE PAGAMENTO:" HorizontalAlignment="Left" Margin="546,76,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label HorizontalAlignment="Left" Margin="400,272,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label Content="UNIDADES:" HorizontalAlignment="Left" Margin="295,166,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label Content="DATA:" HorizontalAlignment="Left" Margin="546,166,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label Content="HORA:" HorizontalAlignment="Left" Margin="44,248,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label HorizontalAlignment="Left" Margin="400,272,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label Content="CÓDIGO DO PRODUTO:" HorizontalAlignment="Left" Margin="295,248,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label Content="PARCELA:" HorizontalAlignment="Left" Margin="546,248,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <Label Content="CPF/CNPJ:" HorizontalAlignment="Left" Margin="354,316,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <TextBox x:Name="txtLote" HorizontalAlignment="Left" Margin="294,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy" HorizontalAlignment="Left" Margin="546,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy1" HorizontalAlignment="Left" Margin="44,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <Label Content="DESCRIÇÃO:" HorizontalAlignment="Left" Margin="44,166,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="6.9,6.883"/>
+        <TextBox x:Name="txtLote_Copy2" HorizontalAlignment="Left" Margin="44,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy3" HorizontalAlignment="Left" Margin="294,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy4" HorizontalAlignment="Left" Margin="546,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy5" HorizontalAlignment="Left" Margin="44,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy6" HorizontalAlignment="Left" Margin="294,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy7" HorizontalAlignment="Left" Margin="546,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <TextBox x:Name="txtLote_Copy8" HorizontalAlignment="Left" Margin="294,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
+        <Button x:Name="btnSalvar" Content="SALVAR" HorizontalAlignment="Left" Margin="93,390,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="268,391,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96" Click="Button_Click" RenderTransformOrigin="-1.264,0.154"/>
+        <Button x:Name="btnSalvar_Copy" Content="AVANÇAR" HorizontalAlignment="Left" Margin="432,390,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
+        <Button x:Name="btnSalvar_Copy1" Content="VOLTAR" HorizontalAlignment="Left" Margin="595,391,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
+
     </Grid>
 </Window>
