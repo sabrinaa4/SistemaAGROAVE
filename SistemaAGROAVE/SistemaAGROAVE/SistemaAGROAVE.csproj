@@ -373,5 +373,8 @@
   <ItemGroup>
     <Resource Include="usuario-de-perfil.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="galinha_pintadinha-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
