@@ -8,7 +8,7 @@
         Title="menu" Height="450" Width="800">
     <Grid Background="#FF294B79" Margin="0,1,0,-1">
         <Image Height="NaN" Margin="0,21,0,340" Source="/Captura da Web_20-6-2023_93621_www.canva.com.jpeg" Stretch="Fill" Width="NaN"/>
-        <Label Content="MENU" HorizontalAlignment="Left" Height="81" Margin="313,19,0,0" VerticalAlignment="Top" Width="206" Foreground="White" RenderTransformOrigin="0.5,0.5" FontSize="50" FontFamily="Segoe UI Black">
+        <Label Content="MENU" HorizontalAlignment="Left" Height="82" Margin="332,16,0,0" VerticalAlignment="Top" Width="206" Foreground="White" RenderTransformOrigin="0.5,0.5" FontSize="50" FontFamily="Segoe UI Black">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -19,42 +19,42 @@
             </Label.RenderTransform>
         </Label>
         <Label Content="GRANJA PRIMAVERA (LONGIN)" HorizontalAlignment="Left" Height="35" Margin="2,-1,0,0" VerticalAlignment="Top" Width="257" Foreground="White" FontSize="10" FontFamily="Segoe UI Black"/>
-        
+
         <Image Height="NaN" Margin="0,237,0,2" Source="/Captura da Web_20-6-2023_93621_www.canva.com.jpeg" Stretch="Fill" Width="NaN"/>
-        
+
         <Button x:Name="btnCliente" Content="CLIENTE"  HorizontalAlignment="Left" Height="42" Margin="97,109,0,0" VerticalAlignment="Top" Width="135" Background="#FF001F54" Foreground="White" Click="btnCadastrarCliente_Click" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
-        
+
         <Button x:Name="btnCadastrarFun" Content="FUNCIONÁRIO " HorizontalAlignment="Left" Height="42" Margin="281,109,0,0" VerticalAlignment="Top" Width="135" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarFun_Click"/>
-        
+
         <Button x:Name="btnCadastrarProd" Content="PRODUTO" HorizontalAlignment="Left" Height="42" Margin="462,109,0,0" VerticalAlignment="Top" Width="135" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarProd_Click"/>
-        
+
         <Button x:Name="btnCadastrarFor" Content="FORNECEDOR" HorizontalAlignment="Left" Height="42" Margin="638,109,0,0" VerticalAlignment="Top" Width="135" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarFor_Click"/>
-        
+
         <Button x:Name="btnCadastrarPro" Content="PRODUÇÃO " HorizontalAlignment="Left" Height="42" Margin="97,183,0,0" VerticalAlignment="Top" Width="135" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarPro_Click"/>
-        
+
         <Button x:Name="btnCadastrarAve" Content="AVES" HorizontalAlignment="Left" Height="42" Margin="281,183,0,0" VerticalAlignment="Top" Width="135" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarAve_Click"/>
-        
+
         <Button Content="ENTREGA" HorizontalAlignment="Left" Height="42" Margin="462,183,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.502,1.387" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
-        
+
         <Button Content="VENDA" HorizontalAlignment="Left" Height="42" Margin="107,280,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
-        
+
         <Button Content="CAIXA" HorizontalAlignment="Left" Height="42" Margin="341,280,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarCai_Click"/>
 
         <Button Content="COMPRA" HorizontalAlignment="Left" Height="42" Margin="565,280,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnCadastrarCom_Click"/>
-        
+
         <Button x:Name="btnDespesa" Content="DESPESA" HorizontalAlignment="Left" Height="42" Margin="107,351,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14" Click="btnDespesa_Click"/>
-        
+
         <Button Content="PAGAMENTO" HorizontalAlignment="Left" Height="42" Margin="341,351,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
-        
+
         <Button Content="RECEBIMENTO" HorizontalAlignment="Left" Height="42" Margin="565,351,0,0" VerticalAlignment="Top" Width="189" Background="#FF294B79" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
-        
+
         <Image Height="NaN" Margin="-24,109,716,195" Source="/Captura_da_Web_20-6-2023_10545_www.canva.com-removebg-preview.png" Stretch="Fill" Width="NaN"/>
-        
-        <Button HorizontalAlignment="Left" Height="98" Margin="-20,274,0,0" VerticalAlignment="Top" Width="127" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14">
+
+        <Button HorizontalAlignment="Left" Height="98" Margin="0,274,0,0" VerticalAlignment="Top" Width="107" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14">
 
             <Image x:Name="btnVoltar2" Height="87" Source="/Captura_da_Web_20-6-2023_103014_www.canva.com-removebg-preview (1).png" Stretch="Fill" Width="101"/>
         </Button>
-        
+
         <Button Content="ESTOQUE" HorizontalAlignment="Left" Height="42" Margin="638,183,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.502,1.387" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
     </Grid>
 </Window>
