@@ -23,9 +23,9 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Valor" Binding= "{Binding Valor}" />
-                <DataGridTextColumn Header="Tipo de pagamento" Binding="{Binding Cpf}" />
-                <DataGridTextColumn Header="Descrição" Binding="{Binding Telefone}" />
-                <DataGridTextColumn Header="Unidades" Binding="{Binding Rg}" />
+                <DataGridTextColumn Header="Tipo de pagamento" Binding="{Binding TipoDePag}" />
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" />
+                <DataGridTextColumn Header="Unidades" Binding="{Binding Unidades}" />
                 <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" />
                 <DataGridTextColumn Header="Função" Binding="{Binding Funcao}" />
                 <DataGridTextColumn Header="Setor" Binding="{Binding Setor}" />
