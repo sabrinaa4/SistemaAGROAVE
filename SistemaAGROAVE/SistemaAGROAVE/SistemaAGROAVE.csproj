@@ -376,5 +376,8 @@
   <ItemGroup>
     <Resource Include="btnvoltar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="voltar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

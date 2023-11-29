@@ -51,5 +51,6 @@
         <Button Content="ESTOQUE" HorizontalAlignment="Left" Height="42" Margin="638,183,0,0" VerticalAlignment="Top" Width="135" RenderTransformOrigin="0.502,1.387" Background="#FF001F54" Foreground="White" BorderBrush="#FF001F54" FontFamily="Arial" FontSize="14"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="97,-51,0,0" VerticalAlignment="Top"/>
         <Image Margin="-15,82,684,197" Source="/pintinho.png" Stretch="Fill"/>
+        <Image Margin="7,294,706,59" Source="/voltar.png" Stretch="Fill"/>
     </Grid>
 </Window>

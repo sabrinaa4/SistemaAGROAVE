@@ -69,10 +69,6 @@ namespace SistemaAGROAVE.Views
 
             }
 
-
-
-
-
         }
 
         private void btnConsutarProd_Click(object sender, RoutedEventArgs e)
