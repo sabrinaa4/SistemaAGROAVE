@@ -27,12 +27,13 @@
         </Border>
         <Label Content="BEM-VINDO!" HorizontalAlignment="Left" Height="101" Margin="55,201,0,0" VerticalAlignment="Top" Width="319" FontWeight="Bold" FontSize="60" Background="{x:Null}" Foreground="#FF02163A" BorderBrush="#FF001F54" OpacityMask="White" FontFamily="Impact"/>
         <Label Content="BEM-VINDO!" HorizontalAlignment="Left" Height="101" Margin="62,204,0,0" VerticalAlignment="Top" Width="319" FontWeight="Bold" FontSize="60" Background="{x:Null}" Foreground="White" BorderBrush="White" OpacityMask="White" FontFamily="Impact"/>
-        <Label Content="FAÇA SEU LOGIN" HorizontalAlignment="Left" Height="54" Margin="476,70,0,0" VerticalAlignment="Top" Width="208" FontSize="30" Background="{x:Null}" Foreground="#FF0E0D0D" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontWeight="Bold"/>
+        <Label Content="FAÇA SEU LOGIN" HorizontalAlignment="Left" Height="54" Margin="437,74,0,0" VerticalAlignment="Top" Width="264" FontSize="30" Background="{x:Null}" Foreground="#FF0E0D0D" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontWeight="Bold"/>
         <Label Content="LOGIN:" HorizontalAlignment="Left" Height="36" Margin="420,160,0,0" VerticalAlignment="Top" Width="82" FontWeight="Bold" Background="{x:Null}" Foreground="Black" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontSize="24"/>
-        <Label Content="SENHA:" HorizontalAlignment="Left" Height="36" Margin="420,250,0,0" VerticalAlignment="Top" Width="82" FontWeight="Bold" Background="{x:Null}" Foreground="Black" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontSize="24"/>
+        <Label Content="SENHA:" HorizontalAlignment="Left" Height="36" Margin="420,250,0,0" VerticalAlignment="Top" Width="103" FontWeight="Bold" Background="{x:Null}" Foreground="Black" BorderBrush="White" OpacityMask="White" FontFamily="Source Sans Pro Light" FontSize="24"/>
         <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="420,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="22" TextBlock.FontFamily="Arial" SelectionBrush="#FFFDFDFD" BorderBrush="White" Background="#FFC8C8C8" />
         <TextBox x:Name="txtNome_Copy" HorizontalAlignment="Left" Margin="420,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Height="22" TextBlock.FontFamily="Arial" SelectionBrush="#FFFDFDFD" BorderBrush="White" Background="#FFC8C8C8" />
         <Image Height="NaN" Margin="94,55,465,196" Source="/galinha_pintadinha-removebg-preview.png" Stretch="Fill" Width="NaN"/>
+        <Button Content="ENTRAR" HorizontalAlignment="Left" Margin="507,334,0,0" VerticalAlignment="Top" Height="38" Width="124" TextBlock.FontFamily="Arial" FontWeight="Bold" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

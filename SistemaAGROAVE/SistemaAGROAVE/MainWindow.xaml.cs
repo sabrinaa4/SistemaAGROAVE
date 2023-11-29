@@ -30,5 +30,11 @@ namespace SistemaAGROAVE
             menu form = new menu();
             form.ShowDialog();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            menu form = new menu();
+            form.ShowDialog();
+        }
     }
 }

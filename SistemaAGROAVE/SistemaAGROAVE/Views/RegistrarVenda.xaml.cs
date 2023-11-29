@@ -21,7 +21,7 @@ namespace SistemaAGROAVE.Views
     {
         public RegistrarVenda()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }

@@ -353,16 +353,7 @@
     <Folder Include="Imagens\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Captura_da_Web_20-6-2023_92730_www.canva.com-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Captura da Web_20-6-2023_93621_www.canva.com.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Captura_da_Web_20-6-2023_10545_www.canva.com-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Captura_da_Web_20-6-2023_103014_www.canva.com-removebg-preview %281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image1.png" />
@@ -375,6 +366,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="galinha_pintadinha-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kit-displays-de-cho-pintinho-amarelinho-10-pecas-mdfpainel-D_NQ_NP_702473-MLB26630752854_012018-F-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pintinho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="btnvoltar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

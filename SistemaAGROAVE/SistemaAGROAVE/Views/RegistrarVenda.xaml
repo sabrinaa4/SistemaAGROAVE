@@ -40,10 +40,10 @@
         <TextBox x:Name="txtLote_Copy6" HorizontalAlignment="Left" Margin="294,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
         <TextBox x:Name="txtLote_Copy7" HorizontalAlignment="Left" Margin="546,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
         <TextBox x:Name="txtLote_Copy8" HorizontalAlignment="Left" Margin="294,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" Height="22" TextBlock.FontFamily="Arial"/>
-        <Button x:Name="btnSalvar" Content="SALVAR" HorizontalAlignment="Left" Margin="93,390,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
-        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="268,391,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96" Click="Button_Click" RenderTransformOrigin="-1.264,0.154"/>
-        <Button x:Name="btnSalvar_Copy" Content="AVANÇAR" HorizontalAlignment="Left" Margin="432,390,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
-        <Button x:Name="btnSalvar_Copy1" Content="VOLTAR" HorizontalAlignment="Left" Margin="595,391,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96" Click="btnSalvar_Click"/>
+        <Button x:Name="btnSalvar" Content="SALVAR" HorizontalAlignment="Left" Margin="93,390,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96"/>
+        <Button Content="CANCELAR" HorizontalAlignment="Left" Margin="268,391,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="25" Width="96"  RenderTransformOrigin="-1.264,0.154"/>
+        <Button x:Name="btnSalvar_Copy" Content="AVANÇAR" HorizontalAlignment="Left" Margin="432,390,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96"/>
+        <Button x:Name="btnSalvar_Copy1" Content="VOLTAR" HorizontalAlignment="Left" Margin="595,391,0,0" VerticalAlignment="Top" TextBlock.FontFamily="Arial" Foreground="White" BorderBrush="#FF1E4B88" Background="#FF1E4B88" Height="26" Width="96"/>
 
     </Grid>
 </Window>
