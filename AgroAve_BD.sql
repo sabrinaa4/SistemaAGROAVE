@@ -133,20 +133,20 @@ insert into Fornecedor values (null, 'CB Gráfica', 'Carlos e Benício Gráfica 
 create table Estoque(
 id_est int primary key auto_increment,
 nome_produto_est varchar(100),
-codigo_est varchar(100),
 descricao_est varchar(150),
-quantidade_est int,
 data_fabricacao_est date,
 data_vencimento_est date,
+quantidade_est int,
+codigo_est int,
 id_prod_fk int,
 foreign key(id_prod_fk) references Produto (id_prod)
 );
 
 #Select * From Estoque;
 
-insert into Estoque values (null, 'Quirela', 'Quirela pros galos.', '2022-01-01', '2023-12-31', '12345', 100, 3);
-insert into Estoque values (null, 'Rémdeio', 'Remédio pros pintinhos', '2022-03-15', '2024-06-30', '67890', 50, 2);
-insert into Estoque values (null, 'Fitinha', 'Ftinhas para diferenciar os lotes', '2022-06-20', '2023-09-30', '23456', 200, 1);
+insert into Estoque values (null, 'Quirela', 'Quirela pros galos.', '2022-01-01', '2023-12-31', 100, 12345, 3);
+insert into Estoque values (null, 'Rémdeio', 'Remédio pros pintinhos', '2022-03-15', '2024-06-30', 50, 67890, 2);
+insert into Estoque values (null, 'Fitinha', 'Ftinhas para diferenciar os lotes', '2022-06-20', '2023-09-30', 200, 23456, 1);
 
 create table Compra (
 id_com int primary key auto_increment,
@@ -190,20 +190,20 @@ insert into Producao values (null, 'Ovo Vermelho', 800, '2023-06-21', 'Produçã
 create table Funcionario(
 id_fun int primary key auto_increment,
 nome_fun varchar(100),
-rg_fun varchar(100),
-cpf_fun varchar(100),
-telefone_fun varchar(100),
-carteira_trabalho_fun varchar(100),
-funcao_fun varchar(100),
-setor_fun varchar(100),
-numero_fun varchar(100),
-rua_fun varchar(100),
-bairro_fun varchar(100),
-municipio_fun varchar(100),
-estado_fun varchar(100),
+rg_fun varchar(50),
+cpf_fun varchar(50),
+telefone_fun varchar(50),
+carteira_trabalho_fun varchar(50),
+funcao_fun varchar(50),
+setor_fun varchar(50),
+numero_fun varchar(50),
+rua_fun varchar(50),
+bairro_fun varchar(50),
+municipio_fun varchar(50),
+estado_fun varchar(50),
 salario_fun double,
 id_perf_fk int,
-foreign key(id_perf_fk) references Perfil_Usuario (id_perf)
+foreign key(id_perf_fk) references Perfil_Funcionario (id_perf)
 );
 
 Select * From Funcionario;
@@ -211,6 +211,7 @@ Select * From Funcionario;
 insert into Funcionario values (null, 'João Silva', '12.345.678-9','12.345.678-9', '(98) 97654-8321', 'CT123456', 'Vendedor','Vendas',' 1435', 'Lindicelma Alves de Jesus', 'Bosque dos Ipês', 'Ji-Paraná', 'Rondônia',1235, 1);
 insert into Funcionario values (null, 'Pedro Alvez', '32.165.498-7','12.345.678-9', '(54) 93210-2987', 'CT567890', 'Caixista', 'Caixa','1890',  'Chico Mendes', 'Parque São Pedro', 'Ji-Paraná', 'Rondônia',1235, 1);
 insert into Funcionario values (null, 'Ana Souza', '54.321.987-6','12.345.678-9', '(98) 97654-9321', 'CT987654', 'Entregador', 'Entregas', '205', 'Angelim', 'Nova Brasília', 'Ji-Paraná', 'Rondônia', 1235,1);
+
 
 create table Entrega(
 id_ent int primary key auto_increment,
@@ -223,16 +224,16 @@ numero_casa_ent int,
 rua_ent varchar(100),
 bairro_ent varchar(100),
 municipio_ent varchar(100),
-estado_ent varchar(100)
+estado_ent varchar(100),
 id_fun_fk int,
 foreign key(id_fun_fk) references Funcionario (id_fun)
 );
 
-#Select * From Funcionario;
+#Select * From Entrega;
 
-insert into Entrega values (null, 'Cartelas de ovos brancos', 'Pendente', 'Rua Júlio Guerra, Bairro São Bernardo', 5.00, 0.00, '10:25:00', 3);
-insert into Entrega values (null, 'Cartelas de ovos vermelhos', 'Em andamento', 'Rua Rita Martins Leite, Bairro Jardim São Cristóvão', 8.00, 50.00, '14:30:00', 3);
-insert into Entrega values (null, 'Ovos', 'Concluída', 'Rua Ipê, Bairro Nova brasília', 10.00, 1.00, '16:45:00', 3);
+insert into Entrega values (null, 'Cartelas de ovos brancos', 'Pendente', 5.00, 0.00, '10:25:00', 4508, 'Júlio Guerra', 'Bairro São Bernardo', 'Ji-Paraná', 'Rondônia', 3);
+insert into Entrega values (null, 'Cartelas de ovos vermelhos', 'Em andamento', 8.00, 50.00, '14:30:00', 2054, 'Rua Rita Martins Leite', 'Bairro Jardim São Cristóvão', 'Jaru', 'Rondônia', 3);
+insert into Entrega values (null, 'Ovos', 'Concluída', 10.00, 1.00, '16:45:00', 2429, 'Rua Ipê', 'Bairro Nova brasília', 'Presidente Médici', 'Rondônia', 3);
 
 create table Venda(
 id_ven int primary key auto_increment,
@@ -420,16 +421,16 @@ call salvarCliente ('Peter Parker', 'peterparker@gmail.com', '789.678.124-12', '
 select * from Cliente;
 
 
-# TABELA PERFIL DO USUÁRIO
+# TABELA PERFIL DO FUNCIONÁRIO
 Delimiter $$
-create procedure salvarPerfilUsuario (nome varchar(100), cpf varchar(50), telefone varchar(50), rg varchar(50), email varchar(100), funcao varchar(100), setor varchar(100))
+create procedure salvarPerfilFuncionario (nome varchar(100), cpf varchar(50), telefone varchar(50), rg varchar(50), email varchar(100), funcao varchar(100), setor varchar(100))
 begin
 declare ob_telefone varchar (100);
 
-set ob_telefone = (select telefone_perf from Perfil_Usuario where (telefone_perf = telefone));
+set ob_telefone = (select telefone_perf from Perfil_Funcionario where (telefone_perf = telefone));
 
 if (ob_telefone = '') or (ob_telefone is null) then 
-    insert into Perfil_Usuario values (null, nome, cpf, telefone, rg, email, funcao, setor);
+    insert into Perfil_Funcionario values (null, nome, cpf, telefone, rg, email, funcao, setor);
    
 else 
     select 'O TELEFONE informado já existe na base de dados!' as Alerta;
@@ -438,11 +439,11 @@ end if;
 end;
 $$ Delimiter ;
 
-call salvarPerfilUsuario ('Bruce Banner', '321.654.983-89', '(69) 99968-3265', '54.321.888-2', 'banner@gmail.com', 'Vendedor', 'Vendas');
-call salvarPerfilUsuario ('Steve Rogers', '123.546.547-21', '(69) 99654-5487', '54.548.987-3', 'rogers@gmail.com', 'Vendedor', 'Vendas');
-call salvarPerfilUsuario ('Wanda Maximof', '546.112.996-65', '(69) 99677-2165', '65.326.999-6', 'maximof@gmail.com', 'Caixa', 'Caixas');
+call salvarPerfilFuncionario ('Bruce Banner', '321.654.983-89', '(69) 99968-3265', '54.321.888-2', 'banner@gmail.com', 'Vendedor', 'Vendas');
+call salvarPerfilFuncionario ('Steve Rogers', '123.546.547-21', '(69) 99654-5487', '54.548.987-3', 'rogers@gmail.com', 'Vendedor', 'Vendas');
+call salvarPerfilFuncionario ('Wanda Maximof', '546.112.996-65', '(69) 99677-2165', '65.326.999-6', 'maximof@gmail.com', 'Caixa', 'Caixas');
 
-select * from Perfil_Usuario;
+select * from Perfil_Funcionario;
 
 
 
@@ -542,11 +543,11 @@ select * from Fornecedor;
 
 # TABELA ESTOQUE
 Delimiter $$
-create procedure salvarEstoque (nome varchar(100), descricao varchar(150), data_fabricacao date, data_vencimento date, codigo varchar(100), quantidade int, prod_fk int)
+create procedure salvarEstoque (nome varchar(100), descricao varchar(150), data_fabricacao date, data_vencimento date, quantidade int, codigo int, prod_fk int)
 begin
 
 if (codigo <> '') and (descricao <> '') then
-    insert into Estoque values (null, nome, descricao, data_fabricacao, data_vencimento, codigo, quantidade, prod_fk);
+    insert into Estoque values (null, nome, descricao, data_fabricacao, data_vencimento, quantidade, codigo, prod_fk);
    
 else 
     select 'Os campos CÓDIGO e DESCRIÇÃO são obrigatorios!' as Alerta;
@@ -555,9 +556,9 @@ end if;
 end;
 $$ Delimiter ;
 
-call salvarEstoque('Ovos vermelho', 'Ovos vermelhos das galinhas do galpão 1', '2023-09-18', '2024-09-18', '67890', 75, 2);
-call salvarEstoque('Ovos brancos', 'Ovos vermelhos das galinhas do galpão 3', '2023-09-22', '2024-09-22', '54321', 50, 1);
-call salvarEstoque('Garnisé', 'Galinha da raça Garnisé, branca', '2023-09-20', '2024-09-20', '12345', 100, 3);
+call salvarEstoque('Ovos vermelho', 'Ovos vermelhos das galinhas do galpão 1', '2023-09-18', '2024-09-18', 75, '67890', 2);
+call salvarEstoque('Ovos brancos', 'Ovos vermelhos das galinhas do galpão 3', '2023-09-22', '2024-09-22', 50, '54321', 1);
+call salvarEstoque('Garnisé', 'Galinha da raça Garnisé, branca', '2023-09-20', '2024-09-20', 100, '12345', 3);
 
 select * from Estoque;
 
@@ -632,26 +633,27 @@ call salvarFuncionario ('Pedro Santos', '4567890', '456.789.123-00', '(33) 4567-
 
 select * from Funcionario;
 
-;
+
 
 # TABELA ENTREGA 
 Delimiter $$
-create procedure salvarEntrega (nome varchar(100), status varchar(200), endereco varchar(100), taxa double, valor_troco double, hora time, funcionario_fk int)
+create procedure salvarEntrega (nome varchar(100), status varchar(200), taxa double, valor_troco double, hora time, numero_casa int, rua varchar(100), bairro varchar(100), 
+municipio varchar(100), estado varchar(100), funcionario_fk int)
 begin
 
-if (nome <> '') and (endereco <> '') then
-    insert into Entrega values (null, nome, status, endereco, taxa, valor_troco, hora, funcionario_fk);
+if (nome <> '') and (taxa <> '') then
+    insert into Entrega values (null, nome, status, taxa, valor_troco, hora, numero_casa, rua, bairro, municipio, estado, funcionario_fk);
    
 else 
-    select 'Os campos NOME e ENDEREÇO são obrigatorios!' as Alerta;
+    select 'Os campos NOME e TAXA são obrigatorios!' as Alerta;
 end if;
 
 end;
 $$ Delimiter ;
 
-call salvarEntrega ('Ovos Vermelhos', 'Entregue', 'Monte Catelo', 5.00, 20.00,'14:30:00', 3);
-call salvarEntrega ('Ovos Brancos', 'Pendente', 'São Paulo', 4.50, 0.00,'11:15:00', 3);
-call salvarEntrega ('Ovos Vemelhos', 'Entregue', 'Av. JK', 6.00, 10.00, '16:45:00', 3);
+call salvarEntrega ('Ovos Vermelhos', 'Entregue', 5.00, 20.00, '14:30:00', 2405, 'Monte Catelo', 'Ouro Branco', 'Porto Velho', 'Rondônia', 3);
+call salvarEntrega ('Ovos Brancos', 'Pendente', 4.50, 0.00, '11:15:00', 2378, 'São Paulo', 'Nova Brasília', 'Rio Branco', 'Acre', 3);
+call salvarEntrega ('Ovos Vemelhos', 'Entregue', 6.00, 10.00, '16:45:00', 1234, 'Av. JK', 'Capelasso', 'Ariquemes', 'Rondônia', 3);
                                                                                
 select * from Entrega;
 
