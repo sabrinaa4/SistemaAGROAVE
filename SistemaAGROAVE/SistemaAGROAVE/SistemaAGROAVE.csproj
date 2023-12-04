@@ -108,6 +108,8 @@
     <Compile Include="Models\ClienteJuridicoDAO.cs" />
     <Compile Include="Models\Compra.cs" />
     <Compile Include="Models\CompraDAO.cs" />
+    <Compile Include="Models\Entrega.cs" />
+    <Compile Include="Models\EntregaDAO.cs" />
     <Compile Include="Models\Estoque.cs" />
     <Compile Include="Models\EstoqueDAO.cs" />
     <Compile Include="Models\Fornecedor.cs" />
@@ -132,6 +134,9 @@
     </Compile>
     <Compile Include="Views\CadastrarCompra.xaml.cs">
       <DependentUpon>CadastrarCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadastrarEntrega.xaml.cs">
+      <DependentUpon>CadastrarEntrega.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CadastrarFornecedor.xaml.cs">
       <DependentUpon>CadastrarFornecedor.xaml</DependentUpon>
@@ -159,6 +164,9 @@
     </Compile>
     <Compile Include="Views\ConsultarCompra.xaml.cs">
       <DependentUpon>ConsultarCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarEntrega.xaml.cs">
+      <DependentUpon>ConsultarEntrega.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ConsultarEstoque.xaml.cs">
       <DependentUpon>ConsultarEstoque.xaml</DependentUpon>
@@ -234,6 +242,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastrarEntrega.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CadastrarFornecedor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -267,6 +279,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConsultarCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConsultarEntrega.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -378,6 +394,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="seta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
